@@ -1,0 +1,37 @@
+{
+  "name": "growmies-nj-bot",
+  "version": "1.0.0",
+  "description": "Discord automation bot for Growmies NJ cannabis community with age verification, moderation, and event management features",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "deploy": "node deploy-commands.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "cannabis",
+    "community",
+    "age-verification",
+    "moderation",
+    "automation"
+  ],
+  "author": "Growmies NJ",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8"
+  },
+  "engines": {
+    "node": ">=16.11.0"
+  }
+}
