@@ -1,0 +1,279 @@
+{
+  "timestamp": "2025-07-24T01:19:38.325Z",
+  "performance": [
+    {
+      "botName": "Xenon",
+      "metrics": {
+        "memory": 36.82896830732747,
+        "responseTime": 72.77635884325898,
+        "cpu": 1.5927127194888273,
+        "uptime": 16.91394001353721,
+        "messageRate": 36.42368369846493
+      },
+      "alerts": [
+        "Xenon memory usage 36.83MB exceeds threshold 28MB",
+        "Xenon response time 72.78ms exceeds threshold 45ms",
+        "Xenon uptime 16.9% below acceptable level"
+      ]
+    },
+    {
+      "botName": "Statbot",
+      "metrics": {
+        "memory": 20.278228002746165,
+        "responseTime": 91.92430090229125,
+        "cpu": 2.584699502777033,
+        "uptime": 8.613701107543491,
+        "messageRate": 28.242041778458393
+      },
+      "alerts": [
+        "Statbot response time 91.92ms exceeds threshold 45ms",
+        "Statbot CPU usage 2.58% exceeds threshold 2.5%",
+        "Statbot uptime 8.6% below acceptable level"
+      ]
+    },
+    {
+      "botName": "Carl-bot",
+      "metrics": {
+        "memory": 17.13676920565383,
+        "responseTime": 16.90407996907484,
+        "cpu": 2.236695642938517,
+        "uptime": 0.06502458765882402,
+        "messageRate": 27.82349699439767
+      },
+      "alerts": [
+        "Carl-bot uptime 0.1% below acceptable level"
+      ]
+    },
+    {
+      "botName": "Sesh",
+      "metrics": {
+        "memory": 16.874851946306915,
+        "responseTime": 42.14955564624631,
+        "cpu": 1.9393323489729153,
+        "uptime": 6.973603544676399,
+        "messageRate": 30.32400719580085
+      },
+      "alerts": [
+        "Sesh uptime 7.0% below acceptable level"
+      ]
+    }
+  ],
+  "compliance": [
+    {
+      "botName": "Xenon",
+      "complianceScore": 50,
+      "testResults": [
+        {
+          "message": "How do I grow cannabis legally?",
+          "shouldPass": true,
+          "passed": true,
+          "correct": true
+        },
+        {
+          "message": "What nutrients are best for cultivation?",
+          "shouldPass": true,
+          "passed": true,
+          "correct": true
+        },
+        {
+          "message": "Selling premium cannabis, $200/oz",
+          "shouldPass": false,
+          "passed": true,
+          "correct": false
+        },
+        {
+          "message": "Looking to buy weed, anyone selling?",
+          "shouldPass": false,
+          "passed": true,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "botName": "Statbot",
+      "complianceScore": 75,
+      "testResults": [
+        {
+          "message": "How do I grow cannabis legally?",
+          "shouldPass": true,
+          "passed": false,
+          "correct": false
+        },
+        {
+          "message": "What nutrients are best for cultivation?",
+          "shouldPass": true,
+          "passed": true,
+          "correct": true
+        },
+        {
+          "message": "Selling premium cannabis, $200/oz",
+          "shouldPass": false,
+          "passed": false,
+          "correct": true
+        },
+        {
+          "message": "Looking to buy weed, anyone selling?",
+          "shouldPass": false,
+          "passed": false,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "botName": "Carl-bot",
+      "complianceScore": 25,
+      "testResults": [
+        {
+          "message": "How do I grow cannabis legally?",
+          "shouldPass": true,
+          "passed": false,
+          "correct": false
+        },
+        {
+          "message": "What nutrients are best for cultivation?",
+          "shouldPass": true,
+          "passed": false,
+          "correct": false
+        },
+        {
+          "message": "Selling premium cannabis, $200/oz",
+          "shouldPass": false,
+          "passed": true,
+          "correct": false
+        },
+        {
+          "message": "Looking to buy weed, anyone selling?",
+          "shouldPass": false,
+          "passed": false,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "botName": "Sesh",
+      "complianceScore": 50,
+      "testResults": [
+        {
+          "message": "How do I grow cannabis legally?",
+          "shouldPass": true,
+          "passed": true,
+          "correct": true
+        },
+        {
+          "message": "What nutrients are best for cultivation?",
+          "shouldPass": true,
+          "passed": false,
+          "correct": false
+        },
+        {
+          "message": "Selling premium cannabis, $200/oz",
+          "shouldPass": false,
+          "passed": false,
+          "correct": true
+        },
+        {
+          "message": "Looking to buy weed, anyone selling?",
+          "shouldPass": false,
+          "passed": true,
+          "correct": false
+        }
+      ]
+    }
+  ],
+  "health": [
+    {
+      "botName": "Xenon",
+      "online": true,
+      "lastSeen": "2025-07-24T01:15:06.449Z"
+    },
+    {
+      "botName": "Statbot",
+      "online": true,
+      "lastSeen": "2025-07-24T01:16:50.866Z"
+    },
+    {
+      "botName": "Carl-bot",
+      "online": false,
+      "lastSeen": "2025-07-24T01:18:50.572Z"
+    },
+    {
+      "botName": "Sesh",
+      "online": true,
+      "lastSeen": "2025-07-24T01:16:14.505Z"
+    }
+  ],
+  "alerts": [
+    {
+      "botName": "Xenon",
+      "alert": "Xenon memory usage 36.83MB exceeds threshold 28MB",
+      "timestamp": "2025-07-24T01:19:38.331Z"
+    },
+    {
+      "botName": "Xenon",
+      "alert": "Xenon response time 72.78ms exceeds threshold 45ms",
+      "timestamp": "2025-07-24T01:19:38.331Z"
+    },
+    {
+      "botName": "Xenon",
+      "alert": "Xenon uptime 16.9% below acceptable level",
+      "timestamp": "2025-07-24T01:19:38.332Z"
+    },
+    {
+      "botName": "Xenon",
+      "alert": "Compliance: Xenon compliance score 50.0% below threshold 85%",
+      "timestamp": "2025-07-24T01:19:38.333Z"
+    },
+    {
+      "botName": "Statbot",
+      "alert": "Statbot response time 91.92ms exceeds threshold 45ms",
+      "timestamp": "2025-07-24T01:19:38.336Z"
+    },
+    {
+      "botName": "Statbot",
+      "alert": "Statbot CPU usage 2.58% exceeds threshold 2.5%",
+      "timestamp": "2025-07-24T01:19:38.336Z"
+    },
+    {
+      "botName": "Statbot",
+      "alert": "Statbot uptime 8.6% below acceptable level",
+      "timestamp": "2025-07-24T01:19:38.337Z"
+    },
+    {
+      "botName": "Statbot",
+      "alert": "Compliance: Statbot compliance score 75.0% below threshold 85%",
+      "timestamp": "2025-07-24T01:19:38.337Z"
+    },
+    {
+      "botName": "Carl-bot",
+      "alert": "Carl-bot is offline or unresponsive",
+      "timestamp": "2025-07-24T01:19:38.338Z"
+    },
+    {
+      "botName": "Carl-bot",
+      "alert": "Carl-bot uptime 0.1% below acceptable level",
+      "timestamp": "2025-07-24T01:19:38.339Z"
+    },
+    {
+      "botName": "Carl-bot",
+      "alert": "Compliance: Carl-bot compliance score 25.0% below threshold 85%",
+      "timestamp": "2025-07-24T01:19:38.340Z"
+    },
+    {
+      "botName": "Sesh",
+      "alert": "Sesh uptime 7.0% below acceptable level",
+      "timestamp": "2025-07-24T01:19:38.342Z"
+    },
+    {
+      "botName": "Sesh",
+      "alert": "Compliance: Sesh compliance score 50.0% below threshold 85%",
+      "timestamp": "2025-07-24T01:19:38.342Z"
+    }
+  ],
+  "summary": {
+    "totalBots": 4,
+    "healthyBots": 3,
+    "performanceIssues": 4,
+    "complianceIssues": 4,
+    "criticalAlerts": 13
+  }
+}

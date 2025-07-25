@@ -1,0 +1,25 @@
+{
+  "guildId": "1390722668025872504",
+  "guildName": "Growmies NJ",
+  "memberCount": 7,
+  "configuredAt": "2025-07-23T23:40:26.479Z",
+  "roles": {
+    "Admin": "1397724990865936467",
+    "Mod Team": "1397724996087971883",
+    "Verified 21+": "1397725004564791410",
+    "Growmie": "1397725010046750823"
+  },
+  "categories": {
+    "General": "1397725024634409022",
+    "Cannabis 21+": "1397725061506404395"
+  },
+  "channels": {
+    "General:welcome": "1397725032200802304",
+    "General:rules": "1397725039444623440",
+    "General:age-verification": "1397725045018857482",
+    "General:general-chat": "1397725050794279087",
+    "Cannabis 21+:growing-discussion": "1397725067068047453",
+    "Cannabis 21+:strain-reviews": "1397725072101343445",
+    "Cannabis 21+:nj-dispensaries": "1397725077331775549"
+  }
+}

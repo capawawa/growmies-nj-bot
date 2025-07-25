@@ -1,0 +1,218 @@
+{
+  "lastUpdated": "2025-07-24T01:08:30.000Z",
+  "version": "1.0.0",
+  "globalRules": {
+    "forbiddenKeywords": [
+      "selling", "buying", "purchase", "payment", "cash", "money", "price", "cost",
+      "illegal", "black market", "street", "dealer", "plug", "connect",
+      "ship", "shipping", "mail", "package", "delivery", "send",
+      "transaction", "trade", "exchange", "sell", "buy"
+    ],
+    "allowedTerms": [
+      "growing", "cultivation", "hydroponics", "nutrients", "strain", "genetics",
+      "harvest", "flowering", "vegetation", "clone", "seed", "terpenes",
+      "educational", "legal", "compliance", "medical", "therapeutic",
+      "organic", "indoor", "outdoor", "greenhouse", "pH", "EC", "PPM",
+      "light cycle", "training", "pruning", "curing", "drying"
+    ],
+    "zoneRequirements": {
+      "public": {
+        "ageRequirement": "18+",
+        "contentType": "educational",
+        "allowedTopics": ["growing basics", "legal information", "plant biology"]
+      },
+      "private": {
+        "ageRequirement": "21+",
+        "contentType": "advanced",
+        "allowedTopics": ["advanced techniques", "strain discussions", "harvest sharing"]
+      }
+    }
+  },
+  "botConfigurations": {
+    "carlbot": {
+      "name": "Carl-bot",
+      "automodRules": {
+        "keywordFiltering": {
+          "enabled": true,
+          "action": "delete",
+          "logChannel": "mod-logs",
+          "notifyModerators": true,
+          "forbiddenPatterns": [
+            "\\b(sell|buy|selling|buying)\\b.*\\b(weed|cannabis|marijuana|bud)\\b",
+            "\\b(price|cost|dollar|\\$)\\b.*\\b(gram|ounce|pound|oz|lb)\\b",
+            "\\b(ship|mail|send|deliver)\\b.*\\b(package|parcel|box)\\b",
+            "\\b(illegal|black.?market|street.?dealer)\\b"
+          ]
+        },
+        "spamProtection": {
+          "enabled": true,
+          "maxMessages": 5,
+          "timeWindow": 10,
+          "punishment": "timeout"
+        },
+        "linkFiltering": {
+          "enabled": true,
+          "allowedDomains": [
+            "reddit.com",
+            "youtube.com",
+            "growweedeasy.com",
+            "leafly.com",
+            "royalqueenseeds.com"
+          ]
+        }
+      },
+      "reactionRoles": {
+        "experienceLevel": {
+          "🌱": "Beginner Grower",
+          "🌿": "Intermediate Grower", 
+          "🍃": "Advanced Grower",
+          "🔬": "Master Grower"
+        },
+        "growMethod": {
+          "💧": "Hydroponic",
+          "🌱": "Soil",
+          "🌊": "Coco Coir",
+          "💨": "Aeroponic"
+        },
+        "strainPreference": {
+          "😴": "Indica Lover",
+          "⚡": "Sativa Enthusiast",
+          "🌈": "Hybrid Appreciator"
+        }
+      },
+      "customCommands": {
+        "!ph": "Optimal pH for cannabis: Soil 6.0-7.0, Hydro 5.5-6.5",
+        "!nutrients": "NPK ratios vary by growth stage. Veg: Higher N, Flower: Higher P&K",
+        "!lightcycle": "Veg: 18/6 or 24/0, Flower: 12/12 for photoperiod strains",
+        "!compliance": "Always follow local laws. This server is for educational purposes only."
+      }
+    },
+    "sesh": {
+      "name": "Sesh",
+      "eventTypes": {
+        "growSessions": {
+          "enabled": true,
+          "defaultDuration": 120,
+          "categories": [
+            "Transplanting Workshop",
+            "Nutrient Mixing Session",
+            "Training Techniques Demo",
+            "Harvest Preparation",
+            "Curing & Storage Tips"
+          ]
+        },
+        "educationalEvents": {
+          "enabled": true,
+          "defaultDuration": 60,
+          "categories": [
+            "Cannabis Biology 101",
+            "Legal Updates Discussion",
+            "Equipment Reviews",
+            "Strain Genetics Deep Dive",
+            "Organic Growing Methods"
+          ]
+        },
+        "harvestCelebrations": {
+          "enabled": true,
+          "defaultDuration": 90,
+          "categories": [
+            "First Harvest Celebration",
+            "Seasonal Harvest Share",
+            "Yield Comparison Meet",
+            "Quality Assessment Session"
+          ]
+        }
+      },
+      "restrictions": {
+        "noConsumptionEvents": true,
+        "noSalesEvents": true,
+        "educationalFocus": true,
+        "ageVerificationRequired": true
+      },
+      "defaultSettings": {
+        "timezone": "America/New_York",
+        "maxAttendees": 50,
+        "requireRSVP": true,
+        "allowWaitlist": true
+      }
+    },
+    "statbot": {
+      "name": "Statbot",
+      "analyticsConfig": {
+        "trackingCategories": {
+          "educational": {
+            "channels": ["growing-tips", "strain-info", "legal-updates"],
+            "weight": 1.5
+          },
+          "community": {
+            "channels": ["general-chat", "introductions", "off-topic"],
+            "weight": 1.0
+          },
+          "showcase": {
+            "channels": ["harvest-photos", "grow-setups", "before-after"],
+            "weight": 1.2
+          }
+        },
+        "engagementMetrics": {
+          "messageActivity": true,
+          "reactionTracking": true,
+          "voiceActivity": false,
+          "joinLeaveTracking": true
+        },
+        "privacySettings": {
+          "anonymizeUserData": true,
+          "retentionPeriod": 90,
+          "shareWithModerators": true
+        }
+      },
+      "channelCounters": {
+        "memberCount": {
+          "enabled": true,
+          "format": "🌱 Members: {count}"
+        },
+        "onlineCount": {
+          "enabled": true,
+          "format": "🟢 Online: {count}"
+        },
+        "messagesPerDay": {
+          "enabled": true,
+          "format": "💬 Daily Messages: {count}"
+        }
+      }
+    },
+    "xenon": {
+      "name": "Xenon",
+      "backupConfig": {
+        "schedule": {
+          "frequency": "daily",
+          "time": "03:00",
+          "timezone": "America/New_York"
+        },
+        "retention": {
+          "daily": 7,
+          "weekly": 4,
+          "monthly": 3
+        },
+        "includeMessages": false,
+        "includeChannels": true,
+        "includeRoles": true,
+        "includeSettings": true
+      },
+      "securitySettings": {
+        "encryptBackups": true,
+        "restrictAccess": ["Owner", "Co-Owner"],
+        "logAllAccess": true,
+        "sensitiveDataHandling": "exclude"
+      },
+      "cannabisCompliance": {
+        "excludeSensitiveChannels": [
+          "private-grows",
+          "personal-info",
+          "verification"
+        ],
+        "sanitizeUserData": true,
+        "complianceNotes": "Backups exclude sensitive cannabis-related discussions"
+      }
+    }
+  }
+}

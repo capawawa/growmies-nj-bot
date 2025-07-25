@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "alwaysAllow": [
+        "create_relations",
+        "read_graph",
+        "search_nodes",
+        "open_nodes",
+        "add_observations",
+        "create_entities"
+      ]
+    }
+  }
+}

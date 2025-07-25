@@ -1,0 +1,146 @@
+{
+  "deployment": {
+    "startTime": "2025-07-24T01:09:21.773Z",
+    "endTime": "2025-07-24T01:09:23.022Z",
+    "duration": "1s",
+    "success": true
+  },
+  "bots": {
+    "xenon": {
+      "name": "Xenon",
+      "id": "416358583220043796",
+      "deployOrder": 1,
+      "permissions": [
+        "ADMINISTRATOR"
+      ],
+      "cannabisCompliance": {
+        "backupSensitiveData": true,
+        "automatedSchedule": true,
+        "rollbackCapability": true
+      },
+      "inviteUrl": "https://discord.com/api/oauth2/authorize?client_id=416358583220043796&permissions=8&scope=bot"
+    },
+    "statbot": {
+      "name": "Statbot",
+      "id": "491769129318088714",
+      "deployOrder": 2,
+      "permissions": [
+        "VIEW_CHANNELS",
+        "READ_MESSAGE_HISTORY"
+      ],
+      "cannabisCompliance": {
+        "trackEducationalContent": true,
+        "analyticsPrivacy": true,
+        "engagementMetrics": true
+      },
+      "inviteUrl": "https://discord.com/api/oauth2/authorize?client_id=491769129318088714&permissions=66560&scope=bot"
+    },
+    "carlbot": {
+      "name": "Carl-bot",
+      "id": "235148962103951360",
+      "deployOrder": 3,
+      "permissions": [
+        "MANAGE_ROLES",
+        "MANAGE_MESSAGES",
+        "KICK_MEMBERS",
+        "ADD_REACTIONS",
+        "SEND_MESSAGES",
+        "EMBED_LINKS"
+      ],
+      "cannabisCompliance": {
+        "automodCannabisRules": true,
+        "reactionRoles": true,
+        "customCommands": true,
+        "illegalContentBlocking": true
+      },
+      "inviteUrl": "https://discord.com/api/oauth2/authorize?client_id=235148962103951360&permissions=268438534&scope=bot"
+    },
+    "sesh": {
+      "name": "Sesh",
+      "id": "616754792965865495",
+      "deployOrder": 4,
+      "permissions": [
+        "SEND_MESSAGES",
+        "EMBED_LINKS",
+        "ADD_REACTIONS",
+        "READ_MESSAGE_HISTORY"
+      ],
+      "cannabisCompliance": {
+        "growSessionEvents": true,
+        "harvestCelebrations": true,
+        "educationalWorkshops": true,
+        "noConsumptionEvents": true
+      },
+      "inviteUrl": "https://discord.com/api/oauth2/authorize?client_id=616754792965865495&permissions=19456&scope=bot"
+    }
+  },
+  "logs": [
+    "[2025-07-24T01:09:21.773Z] INFO: 🎯 Starting GrowmiesNJ Third-Party Bot Integration Deployment",
+    "[2025-07-24T01:09:21.782Z] INFO: 🔍 Validating deployment environment...",
+    "[2025-07-24T01:09:22.410Z] INFO: ✅ GrowmiesSprout bot is healthy",
+    "[2025-07-24T01:09:22.999Z] INFO: ✅ Database connection validated",
+    "[2025-07-24T01:09:23.000Z] INFO: 🔗 Generating bot invite links with cannabis-compliant permissions...",
+    "[2025-07-24T01:09:23.000Z] INFO: 📋 Xenon (Order 1): https://discord.com/api/oauth2/authorize?client_id=416358583220043796&permissions=8&scope=bot",
+    "[2025-07-24T01:09:23.001Z] INFO: 📋 Statbot (Order 2): https://discord.com/api/oauth2/authorize?client_id=491769129318088714&permissions=66560&scope=bot",
+    "[2025-07-24T01:09:23.001Z] INFO: 📋 Carl-bot (Order 3): https://discord.com/api/oauth2/authorize?client_id=235148962103951360&permissions=268438534&scope=bot",
+    "[2025-07-24T01:09:23.001Z] INFO: 📋 Sesh (Order 4): https://discord.com/api/oauth2/authorize?client_id=616754792965865495&permissions=19456&scope=bot",
+    "[2025-07-24T01:09:23.003Z] INFO: ✅ Invite links generated and saved to docs/BOT_INVITE_LINKS.json",
+    "[2025-07-24T01:09:23.003Z] INFO: 🚀 Deploying Xenon (Order 1)...",
+    "[2025-07-24T01:09:23.004Z] INFO: 📨 Please invite Xenon using: https://discord.com/api/oauth2/authorize?client_id=416358583220043796&permissions=8&scope=bot",
+    "[2025-07-24T01:09:23.005Z] INFO: ⏳ Waiting for Xenon to be manually added to server...",
+    "[2025-07-24T01:09:23.005Z] INFO: 🌿 Applying cannabis compliance rules for Xenon...",
+    "[2025-07-24T01:09:23.007Z] INFO: ✅ Cannabis compliance configuration saved for Xenon",
+    "[2025-07-24T01:09:23.007Z] INFO: 🔄 Testing rollback capability for Xenon...",
+    "[2025-07-24T01:09:23.008Z] INFO: 📦 Creating pre-deployment backup...",
+    "[2025-07-24T01:09:23.008Z] INFO: ✅ Backup created successfully",
+    "[2025-07-24T01:09:23.008Z] INFO: ✅ Rollback test completed for Xenon",
+    "[2025-07-24T01:09:23.008Z] INFO: ⏳ Please verify Xenon before proceeding to next bot...",
+    "[2025-07-24T01:09:23.008Z] INFO:    - Check bot appears in server member list",
+    "[2025-07-24T01:09:23.009Z] INFO:    - Verify permissions are correctly applied",
+    "[2025-07-24T01:09:23.009Z] INFO:    - Test cannabis compliance rules",
+    "[2025-07-24T01:09:23.009Z] INFO:    - Monitor server performance",
+    "[2025-07-24T01:09:23.009Z] INFO:    - Press Enter when ready to continue...",
+    "[2025-07-24T01:09:23.009Z] INFO: 🚀 Deploying Statbot (Order 2)...",
+    "[2025-07-24T01:09:23.010Z] INFO: 📨 Please invite Statbot using: https://discord.com/api/oauth2/authorize?client_id=491769129318088714&permissions=66560&scope=bot",
+    "[2025-07-24T01:09:23.010Z] INFO: ⏳ Waiting for Statbot to be manually added to server...",
+    "[2025-07-24T01:09:23.010Z] INFO: 🌿 Applying cannabis compliance rules for Statbot...",
+    "[2025-07-24T01:09:23.011Z] INFO: ✅ Cannabis compliance configuration saved for Statbot",
+    "[2025-07-24T01:09:23.011Z] INFO: 🔄 Testing rollback capability for Statbot...",
+    "[2025-07-24T01:09:23.012Z] INFO: ✅ Rollback test completed for Statbot",
+    "[2025-07-24T01:09:23.012Z] INFO: ⏳ Please verify Statbot before proceeding to next bot...",
+    "[2025-07-24T01:09:23.012Z] INFO:    - Check bot appears in server member list",
+    "[2025-07-24T01:09:23.012Z] INFO:    - Verify permissions are correctly applied",
+    "[2025-07-24T01:09:23.012Z] INFO:    - Test cannabis compliance rules",
+    "[2025-07-24T01:09:23.013Z] INFO:    - Monitor server performance",
+    "[2025-07-24T01:09:23.013Z] INFO:    - Press Enter when ready to continue...",
+    "[2025-07-24T01:09:23.013Z] INFO: 🚀 Deploying Carl-bot (Order 3)...",
+    "[2025-07-24T01:09:23.014Z] INFO: 📨 Please invite Carl-bot using: https://discord.com/api/oauth2/authorize?client_id=235148962103951360&permissions=268438534&scope=bot",
+    "[2025-07-24T01:09:23.015Z] INFO: ⏳ Waiting for Carl-bot to be manually added to server...",
+    "[2025-07-24T01:09:23.015Z] INFO: 🌿 Applying cannabis compliance rules for Carl-bot...",
+    "[2025-07-24T01:09:23.017Z] INFO: ✅ Cannabis compliance configuration saved for Carl-bot",
+    "[2025-07-24T01:09:23.017Z] INFO: 🔄 Testing rollback capability for Carl-bot...",
+    "[2025-07-24T01:09:23.018Z] INFO: ✅ Rollback test completed for Carl-bot",
+    "[2025-07-24T01:09:23.018Z] INFO: ⏳ Please verify Carl-bot before proceeding to next bot...",
+    "[2025-07-24T01:09:23.018Z] INFO:    - Check bot appears in server member list",
+    "[2025-07-24T01:09:23.018Z] INFO:    - Verify permissions are correctly applied",
+    "[2025-07-24T01:09:23.018Z] INFO:    - Test cannabis compliance rules",
+    "[2025-07-24T01:09:23.018Z] INFO:    - Monitor server performance",
+    "[2025-07-24T01:09:23.018Z] INFO:    - Press Enter when ready to continue...",
+    "[2025-07-24T01:09:23.019Z] INFO: 🚀 Deploying Sesh (Order 4)...",
+    "[2025-07-24T01:09:23.020Z] INFO: 📨 Please invite Sesh using: https://discord.com/api/oauth2/authorize?client_id=616754792965865495&permissions=19456&scope=bot",
+    "[2025-07-24T01:09:23.020Z] INFO: ⏳ Waiting for Sesh to be manually added to server...",
+    "[2025-07-24T01:09:23.020Z] INFO: 🌿 Applying cannabis compliance rules for Sesh...",
+    "[2025-07-24T01:09:23.022Z] INFO: ✅ Cannabis compliance configuration saved for Sesh",
+    "[2025-07-24T01:09:23.022Z] INFO: 🔄 Testing rollback capability for Sesh...",
+    "[2025-07-24T01:09:23.022Z] INFO: ✅ Rollback test completed for Sesh"
+  ],
+  "errors": [],
+  "nextSteps": [
+    "Manually invite each bot using provided URLs in deployment order",
+    "Configure cannabis compliance rules for each bot",
+    "Test bot interactions and command conflicts",
+    "Monitor server performance and database impact",
+    "Verify 2-zone architecture compliance",
+    "Run integration testing suite"
+  ]
+}

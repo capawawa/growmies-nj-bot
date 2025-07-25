@@ -1,0 +1,75 @@
+{
+  "testSuite": "GrowmiesNJ Third-Party Bot Integration",
+  "timestamp": "2025-07-24T01:13:51.683Z",
+  "duration": "0s",
+  "overallSuccess": false,
+  "totalBots": 4,
+  "successfulBots": 0,
+  "failedBots": 4,
+  "results": [
+    {
+      "botName": "Xenon",
+      "tests": {
+        "presence": true,
+        "permissions": true,
+        "cannabisCompliance": false,
+        "commandConflicts": true,
+        "performanceImpact": false,
+        "zoneArchitecture": true
+      },
+      "overallSuccess": false
+    },
+    {
+      "botName": "Statbot",
+      "tests": {
+        "presence": true,
+        "permissions": true,
+        "cannabisCompliance": false,
+        "commandConflicts": true,
+        "performanceImpact": false,
+        "zoneArchitecture": true
+      },
+      "overallSuccess": false
+    },
+    {
+      "botName": "Carl-bot",
+      "tests": {
+        "presence": true,
+        "permissions": true,
+        "cannabisCompliance": false,
+        "commandConflicts": true,
+        "performanceImpact": true,
+        "zoneArchitecture": true
+      },
+      "overallSuccess": false
+    },
+    {
+      "botName": "Sesh",
+      "tests": {
+        "presence": true,
+        "permissions": true,
+        "cannabisCompliance": false,
+        "commandConflicts": true,
+        "performanceImpact": true,
+        "zoneArchitecture": true
+      },
+      "overallSuccess": false
+    }
+  ],
+  "errors": [
+    "Xenon compliance below 90%",
+    "Xenon performance impact too high",
+    "Statbot compliance below 90%",
+    "Statbot performance impact too high",
+    "Carl-bot compliance below 90%",
+    "Sesh compliance below 90%"
+  ],
+  "summary": {
+    "presence": 4,
+    "permissions": 4,
+    "cannabisCompliance": 0,
+    "commandConflicts": 4,
+    "performanceImpact": 2,
+    "zoneArchitecture": 4
+  }
+}

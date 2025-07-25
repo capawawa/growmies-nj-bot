@@ -1,0 +1,221 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2025-07-24T01:15:00Z",
+  "complianceLevel": "ENHANCED",
+  "description": "Enhanced cannabis compliance configurations with bot-specific implementation guides",
+  
+  "carlBot": {
+    "botId": "235148962103951360",
+    "complianceTarget": ">=90%",
+    "automodRules": {
+      "cannabisEducationAllowed": {
+        "enabled": true,
+        "allowedTerms": [
+          "growing", "cultivation", "nutrients", "hydroponics", "soil", "lighting",
+          "temperature", "humidity", "harvest", "curing", "trimming", "pruning",
+          "germination", "seedling", "vegetative", "flowering", "trichomes",
+          "terpenes", "cannabinoids", "pH", "PPM", "training", "LST", "SCROG"
+        ],
+        "regexPatterns": [
+          "\\b(grow(ing)?|cultivat(e|ion)|nutrient)\\b(?!.*\\b(sell|buy|trade|money|\\$)\\b)"
+        ],
+        "implementation": {
+          "step1": "Go to Carl-bot dashboard → Automod → Create new rule",
+          "step2": "Set rule name: 'Cannabis Education Allowed'",
+          "step3": "Add whitelist regex patterns above",
+          "step4": "Set action: None (allow messages)",
+          "step5": "Apply to all channels except 21+ private zones"
+        }
+      },
+      "cannabisCommerceBlocked": {
+        "enabled": true,
+        "blockedTerms": [
+          "selling", "buying", "for sale", "WTS", "WTB", "trade", "exchange",
+          "money", "cash", "venmo", "paypal", "cashapp", "illegal", "black market",
+          "dealer", "plug", "connect", "hookup", "score", "cop", "street",
+          "synthetic", "spice", "K2", "schedule I", "federal crime"
+        ],
+        "regexPatterns": [
+          "\\b(sell|buy|trade|WTS|WTB|for sale)\\b.*\\b(cannabis|weed|marijuana|bud|flower)\\b",
+          "\\b(illegal|black market|dealer|plug)\\b",
+          "\\$(\\d+).*\\b(cannabis|weed|marijuana|bud|flower)\\b"
+        ],
+        "implementation": {
+          "step1": "Go to Carl-bot dashboard → Automod → Create new rule",
+          "step2": "Set rule name: 'Cannabis Commerce Blocked'",
+          "step3": "Add blocked regex patterns above",
+          "step4": "Set action: Delete message + 10 minute timeout",
+          "step5": "Set notification: DM user with compliance warning",
+          "step6": "Apply to ALL channels including private zones"
+        }
+      },
+      "ageVerificationEnforced": {
+        "enabled": true,
+        "requirements": {
+          "18PlusChannels": ["general", "growing-tips", "harvest-showcase"],
+          "21PlusChannels": ["consumption", "product-reviews", "social"]
+        },
+        "implementation": {
+          "step1": "Create role-based channel restrictions",
+          "step2": "Set up age verification bot integration",
+          "step3": "Configure automatic role assignment based on verification",
+          "step4": "Block unverified users from posting cannabis content"
+        }
+      }
+    }
+  },
+
+  "sesh": {
+    "botId": "616754792965865495",
+    "complianceTarget": ">=90%",
+    "eventPolicies": {
+      "educationalEventsAllowed": {
+        "enabled": true,
+        "allowedEventTypes": [
+          "Growing Workshop", "Cultivation Seminar", "Harvest Techniques",
+          "Nutrient Education", "Equipment Reviews", "Legal Updates",
+          "Growing Q&A Session", "Beginner's Guide", "Advanced Techniques"
+        ],
+        "implementation": {
+          "step1": "Go to Sesh dashboard → Event Templates",
+          "step2": "Create educational event templates with pre-approved descriptions",
+          "step3": "Set up auto-approval for events using approved templates",
+          "step4": "Configure educational tag system for events"
+        }
+      },
+      "commercialEventsBlocked": {
+        "enabled": true,
+        "blockedEventTypes": [
+          "Sales Event", "Product Launch", "Marketplace", "Trading Session",
+          "Buy/Sell Meet", "Commercial Promotion", "Vendor Event"
+        ],
+        "autoModeration": {
+          "scanEventTitles": true,
+          "scanEventDescriptions": true,
+          "blockedKeywords": [
+            "sale", "discount", "buy", "sell", "trade", "vendor", "commercial",
+            "business", "profit", "money", "payment", "purchase"
+          ]
+        },
+        "implementation": {
+          "step1": "Go to Sesh dashboard → Moderation Settings",
+          "step2": "Enable automatic event scanning",
+          "step3": "Add blocked keywords to content filter",
+          "step4": "Set up manual review queue for flagged events",
+          "step5": "Configure automatic rejection for high-risk keywords"
+        }
+      }
+    }
+  },
+
+  "statbot": {
+    "botId": "491769129318088714",
+    "complianceTarget": ">=90%",
+    "analyticsFiltering": {
+      "dataCollection": {
+        "excludeChannels": ["21-plus-private", "verification", "mod-only"],
+        "excludeKeywords": [
+          "personal-info", "real-name", "address", "phone", "email",
+          "location", "illegal", "transaction", "payment", "money"
+        ],
+        "anonymizeData": true,
+        "implementation": {
+          "step1": "Go to Statbot dashboard → Data Collection Settings",
+          "step2": "Add excluded channels to privacy list",
+          "step3": "Enable data anonymization for all cannabis-related stats",
+          "step4": "Set up keyword filtering for sensitive content",
+          "step5": "Configure automated data purging for privacy compliance"
+        }
+      },
+      "reportGeneration": {
+        "excludeSensitiveData": true,
+        "focusOnEducationalMetrics": [
+          "educational-post-engagement", "question-answer-ratio",
+          "community-help-interactions", "learning-resource-views"
+        ],
+        "implementation": {
+          "step1": "Create custom dashboard focusing on educational metrics",
+          "step2": "Set up automated reports with privacy filters",
+          "step3": "Configure educational engagement tracking",
+          "step4": "Exclude any commerce or transaction-related metrics"
+        }
+      }
+    }
+  },
+
+  "xenon": {
+    "botId": "416358583220043796",
+    "complianceTarget": ">=90%",
+    "backupFiltering": {
+      "sensitiveContentExclusion": {
+        "enabled": true,
+        "excludeChannels": [
+          "verification", "mod-logs", "admin-only", "21-plus-private",
+          "personal-info", "appeals", "reports"
+        ],
+        "excludeMessageTypes": [
+          "verification-data", "personal-information", "payment-details",
+          "real-names", "addresses", "phone-numbers", "email-addresses"
+        ],
+        "implementation": {
+          "step1": "Go to Xenon dashboard → Backup Settings",
+          "step2": "Add excluded channels to backup filter",
+          "step3": "Enable content type filtering for sensitive data",
+          "step4": "Set up encrypted storage for any retained sensitive data",
+          "step5": "Configure automatic deletion of old sensitive backups"
+        }
+      },
+      "complianceBackups": {
+        "retentionPolicy": "90 days maximum",
+        "encryption": "AES-256 required",
+        "auditLogging": true,
+        "implementation": {
+          "step1": "Configure 90-day automatic backup deletion",
+          "step2": "Enable AES-256 encryption for all backups",
+          "step3": "Set up audit logging for backup access",
+          "step4": "Create compliance report generation for backup activities"
+        }
+      }
+    }
+  },
+
+  "globalComplianceSettings": {
+    "auditRequirements": {
+      "logAllComplianceActions": true,
+      "monthlyComplianceReports": true,
+      "automatedComplianceScoring": true
+    },
+    "emergencyProcedures": {
+      "complianceViolationThreshold": "85%",
+      "automaticSuspension": false,
+      "adminNotification": true,
+      "escalationProcedure": "Immediate manual review required"
+    },
+    "implementation": {
+      "step1": "Implement compliance scoring across all bots",
+      "step2": "Set up centralized compliance monitoring dashboard",
+      "step3": "Configure automated alerts for compliance issues",
+      "step4": "Create manual override procedures for emergency situations"
+    }
+  },
+
+  "testingGuidelines": {
+    "complianceVerification": {
+      "testAllowedTerms": [
+        "Test message: How do I grow cannabis legally?",
+        "Test message: What nutrients are best for cultivation?",
+        "Test message: LED vs HPS lighting for growing?"
+      ],
+      "testBlockedTerms": [
+        "Test message: Selling premium cannabis, $200/oz",
+        "Test message: Looking to buy weed, anyone selling?",
+        "Test message: Meet me for illegal trade tonight"
+      ],
+      "expectedResults": {
+        "allowedShouldPass": true,
+        "blockedShouldFail": true,
+        "complianceScore": ">=90%"
+      }
+    }
+  }
+}

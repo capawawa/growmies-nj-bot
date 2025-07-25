@@ -1,4 +1,8 @@
 const { SlashCommandBuilder, InteractionContextType, MessageFlags } = require('discord.js');
+const { User } = require('../../database/models/User');
+const { AuditLog } = require('../../database/models/AuditLog');
+const { WelcomeEmbeds } = require('../../utils/embeds');
+const { RoleManagementService } = require('../../services/roleManagement');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -34,35 +38,99 @@ module.exports = {
                 return;
             }
             
-            // Check if already verified
-            if (member.roles.cache.has(verifiedRoleId)) {
+            // Check database verification status first
+            let userRecord = null;
+            try {
+                userRecord = await User.findOne({
+                    where: {
+                        discord_id: interaction.user.id,
+                        guild_id: guild.id,
+                        is_active: true
+                    }
+                });
+            } catch (dbError) {
+                console.error('❌ Database error checking user verification:', dbError);
+                // Continue with role-only check as fallback
+            }
+
+            // Check if user is verified in database OR has the Discord role
+            const isVerifiedInDb = userRecord && userRecord.verification_status === 'verified';
+            const hasDiscordRole = member.roles.cache.has(verifiedRoleId);
+
+            if (isVerifiedInDb || hasDiscordRole) {
+                // If verified in database but missing Discord role, try to assign it
+                if (isVerifiedInDb && !hasDiscordRole) {
+                    try {
+                        await member.roles.add(verifiedRole, 'Database verification - role sync');
+                        console.log(`🔄 Role synced for verified user ${interaction.user.tag}`);
+                        
+                        // Log role sync
+                        await AuditLog.logRoleAssignment(
+                            interaction.user.id,
+                            guild.id,
+                            'system',
+                            [verifiedRoleId],
+                            { reason: 'Database verification - role synchronization' }
+                        );
+                    } catch (roleError) {
+                        console.error('❌ Failed to sync role for verified user:', roleError);
+                    }
+                }
+
+                // If has role but not verified in database, create database record
+                if (hasDiscordRole && !isVerifiedInDb) {
+                    try {
+                        await User.upsert({
+                            discord_id: interaction.user.id,
+                            guild_id: guild.id,
+                            username: interaction.user.username,
+                            display_name: interaction.user.displayName || interaction.user.globalName,
+                            verification_status: 'verified',
+                            verified_at: new Date(),
+                            is_21_plus: true,
+                            verification_method: 'role_sync',
+                            birth_year: new Date().getFullYear() - 21, // Minimum birth year for 21+
+                            verification_metadata: {
+                                discord_tag: interaction.user.tag,
+                                sync_timestamp: new Date().toISOString(),
+                                source: 'existing_role'
+                            }
+                        });
+                        console.log(`🔄 Database record created for existing verified user ${interaction.user.tag}`);
+                    } catch (syncError) {
+                        console.error('❌ Failed to sync database for verified user:', syncError);
+                    }
+                }
+
                 await interaction.editReply({
-                    content: '✅ You are already verified as 21+ years old and have access to cannabis community content.',
+                    content: '✅ **Already Verified**\n\nYou are already verified as 21+ years old and have access to cannabis community content.\n\n*Your verification status is synchronized across our systems.*',
                     flags: MessageFlags.Ephemeral
                 });
                 return;
             }
+
+            // Check if user was rejected or has too many attempts
+            if (userRecord) {
+                if (userRecord.verification_status === 'rejected') {
+                    await interaction.editReply({
+                        content: '🚫 **Verification Previously Denied**\n\nYou previously indicated you are under 21 years old. You must be 21+ to access cannabis content.\n\nIf this was an error, please contact an administrator.',
+                        flags: MessageFlags.Ephemeral
+                    });
+                    return;
+                }
+
+                if (!userRecord.canAttemptVerification()) {
+                    const hoursRemaining = Math.ceil((24 - ((new Date() - userRecord.last_attempt_at) / (1000 * 60 * 60))));
+                    await interaction.editReply({
+                        content: `⏱️ **Rate Limit Exceeded**\n\nYou have attempted verification too many times. Please wait ${hoursRemaining} hours before trying again.\n\nIf you need assistance, please contact an administrator.`,
+                        flags: MessageFlags.Ephemeral
+                    });
+                    return;
+                }
+            }
             
-            // Age verification confirmation
-            const verificationEmbed = {
-                color: 0x00ff00,
-                title: '🌿 Growmies NJ Age Verification',
-                description: '**Cannabis is legal in New Jersey for adults 21 and older.**\n\n' +
-                           '⚠️ **IMPORTANT LEGAL NOTICE:**\n' +
-                           '• You must be **21 years of age or older** to participate in cannabis discussions\n' +
-                           '• Cannabis possession and use is only legal for adults 21+\n' +
-                           '• This verification is required for Discord ToS compliance\n' +
-                           '• False verification may result in permanent ban\n\n' +
-                           '**By clicking "I Verify" below, you confirm that:**\n' +
-                           '✅ You are 21 years of age or older\n' +
-                           '✅ You understand NJ cannabis laws\n' +
-                           '✅ You agree to follow community guidelines\n' +
-                           '✅ Your verification information is accurate',
-                footer: {
-                    text: 'This verification is private and secure • Growmies NJ Community'
-                },
-                timestamp: new Date().toISOString()
-            };
+            // Enhanced age verification confirmation using our embed templates
+            const verificationEmbed = WelcomeEmbeds.createEnhancedVerificationEmbed();
             
             const verificationButtons = {
                 type: 1, // Action Row

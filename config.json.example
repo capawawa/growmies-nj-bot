@@ -1,0 +1,150 @@
+{
+  "bot": {
+    "name": "Growmies NJ Bot",
+    "version": "1.0.0",
+    "description": "Discord automation bot for Growmies NJ cannabis community",
+    "author": "Growmies NJ Development Team",
+    "website": "https://github.com/your-username/growmies-nj-bot"
+  },
+  "discord": {
+    "defaultPrefix": "!",
+    "embedColor": "#2ecc71",
+    "embedFooter": "Growmies NJ • Cannabis Community Bot",
+    "ownerIds": [
+      "your_discord_user_id_here"
+    ],
+    "supportServerId": "your_support_server_id_here"
+  },
+  "ageVerification": {
+    "enabled": true,
+    "minimumAge": 21,
+    "verifiedRoleName": "Verified Member",
+    "unverifiedRoleName": "Unverified",
+    "verificationChannelName": "age-verification",
+    "welcomeChannelName": "welcome",
+    "rulesChannelName": "rules",
+    "autoKickUnverified": false,
+    "kickTimeoutHours": 24,
+    "verificationMessage": {
+      "title": "🔞 Age Verification Required",
+      "description": "Welcome to Growmies NJ! This server discusses cannabis-related topics which require you to be 21+ years old in accordance with New Jersey state law.",
+      "footer": "By verifying, you confirm you are 21+ and comply with NJ cannabis laws",
+      "color": "#e74c3c"
+    }
+  },
+  "moderation": {
+    "enabled": true,
+    "automod": {
+      "enabled": false,
+      "filters": ["spam", "caps", "mentions"]
+    },
+    "logging": {
+      "enabled": true,
+      "channelName": "mod-logs",
+      "events": ["messageDelete", "messageEdit", "memberJoin", "memberLeave", "memberBan", "memberUnban"]
+    }
+  },
+  "features": {
+    "instagramSync": {
+      "enabled": false,
+      "syncChannelName": "instagram-feed",
+      "syncInterval": 300000,
+      "maxPostsPerSync": 3
+    },
+    "eventManagement": {
+      "enabled": false,
+      "eventsChannelName": "events",
+      "reminderTimes": [86400000, 3600000, 300000],
+      "maxEventsPerUser": 5
+    },
+    "carlBotIntegration": {
+      "enabled": false,
+      "syncRoles": true,
+      "syncChannels": true,
+      "webhookSync": false
+    },
+    "welcomeSystem": {
+      "enabled": true,
+      "channelName": "welcome",
+      "dmWelcome": true,
+      "welcomeMessage": "🌿 Welcome to Growmies NJ, {user}! Please verify your age in the verification channel to access the full community.",
+      "dmMessage": "Thanks for joining Growmies NJ! Please verify your age to participate in our cannabis community discussions."
+    }
+  },
+  "database": {
+    "type": "sqlite",
+    "filename": "data/growmies.sqlite",
+    "backup": {
+      "enabled": true,
+      "interval": 86400000,
+      "retention": 30
+    }
+  },
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": true,
+    "filename": "logs/bot.log",
+    "maxFiles": 7,
+    "maxSize": "10m"
+  },
+  "security": {
+    "rateLimiting": {
+      "enabled": true,
+      "windowMs": 60000,
+      "maxRequests": 5
+    },
+    "permissions": {
+      "adminRoles": ["Admin", "Moderator"],
+      "modRoles": ["Moderator", "Helper"],
+      "trustedRoles": ["Verified Member", "VIP"]
+    }
+  },
+  "cannabis": {
+    "compliance": {
+      "enabled": true,
+      "njLawVersion": "2024",
+      "legalDisclaimer": "This bot and server discuss cannabis in accordance with New Jersey state law. Users must be 21+ and comply with all applicable laws.",
+      "restrictedTerms": false,
+      "educationalMode": true
+    },
+    "channels": {
+      "generalDiscussion": "general-cannabis",
+      "cultivation": "growing-tips",
+      "products": "product-reviews",
+      "legal": "legal-info",
+      "medical": "medical-cannabis"
+    }
+  },
+  "commands": {
+    "cooldowns": {
+      "verify": 60000,
+      "ping": 5000,
+      "server": 30000
+    },
+    "permissions": {
+      "verify": "everyone",
+      "ping": "everyone",
+      "server": "verified"
+    }
+  },
+  "embeds": {
+    "colors": {
+      "success": "#2ecc71",
+      "error": "#e74c3c",
+      "warning": "#f39c12",
+      "info": "#3498db",
+      "cannabis": "#228b22"
+    },
+    "thumbnails": {
+      "default": "https://via.placeholder.com/100x100/2ecc71/ffffff?text=GNJ",
+      "cannabis": "https://via.placeholder.com/100x100/228b22/ffffff?text=🌿"
+    }
+  },
+  "maintenance": {
+    "enabled": false,
+    "message": "Bot is currently under maintenance. Please try again later.",
+    "allowedUsers": [],
+    "estimatedDowntime": "30 minutes"
+  }
+}

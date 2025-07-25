@@ -1,0 +1,254 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-07-24T01:16:00Z",
+  "performanceTargets": {
+    "memoryUsage": "<30MB",
+    "responseTime": "<50ms",
+    "cpuUsage": "<3%"
+  },
+  "description": "Performance optimization configurations for third-party bots",
+
+  "xenon": {
+    "botId": "416358583220043796",
+    "currentIssues": {
+      "memoryUsage": "36.72MB (exceeds 30MB limit)",
+      "responseTime": "71.79ms (exceeds 50ms limit)",
+      "cpuUsage": "2.38% (within limits)"
+    },
+    "optimizations": {
+      "memoryManagement": {
+        "selectiveBackups": {
+          "enabled": true,
+          "excludeChannels": [
+            "bot-logs", "spam-prevention", "auto-moderation-logs",
+            "temporary-channels", "voice-text-channels", "archived-threads"
+          ],
+          "excludeOldMessages": {
+            "enabled": true,
+            "retentionDays": 30,
+            "description": "Only backup messages from last 30 days"
+          },
+          "excludeAttachments": {
+            "enabled": true,
+            "maxFileSize": "10MB",
+            "excludeTypes": [".mp4", ".mov", ".avi", ".zip", ".rar"]
+          },
+          "implementation": {
+            "step1": "Go to Xenon dashboard → Backup Settings → Advanced",
+            "step2": "Enable 'Selective Channel Backup'",
+            "step3": "Add excluded channels to the filter list",
+            "step4": "Set message retention to 30 days maximum",
+            "step5": "Configure attachment size limits and type exclusions",
+            "step6": "Enable compression for backup storage"
+          }
+        },
+        "backupScheduling": {
+          "frequency": "weekly",
+          "time": "03:00 UTC Sunday",
+          "incrementalBackups": true,
+          "compression": "maximum",
+          "implementation": {
+            "step1": "Change backup frequency from daily to weekly",
+            "step2": "Set backup time during low-activity hours",
+            "step3": "Enable incremental backup mode (only changes)",
+            "step4": "Set compression to maximum to reduce memory usage",
+            "step5": "Enable backup verification with reduced memory footprint"
+          }
+        },
+        "cachingOptimization": {
+          "reduceInMemoryCache": true,
+          "diskCacheOnly": true,
+          "maxCacheSize": "15MB",
+          "implementation": {
+            "step1": "Go to Xenon dashboard → Performance Settings",
+            "step2": "Reduce in-memory cache to minimum",
+            "step3": "Enable disk-only caching mode",
+            "step4": "Set maximum cache size to 15MB",
+            "step5": "Enable automatic cache cleanup"
+          }
+        }
+      },
+      "responseTimeOptimization": {
+        "asyncProcessing": {
+          "enabled": true,
+          "backgroundBackups": true,
+          "queuedOperations": true,
+          "implementation": {
+            "step1": "Enable asynchronous backup processing",
+            "step2": "Move backup operations to background queue",
+            "step3": "Set up non-blocking command responses",
+            "step4": "Configure progress notifications instead of blocking waits"
+          }
+        },
+        "commandOptimization": {
+          "disableUnnecessaryCommands": [
+            "backup list", "backup info", "backup status"
+          ],
+          "lightweightResponses": true,
+          "implementation": {
+            "step1": "Disable resource-intensive status commands",
+            "step2": "Enable lightweight response mode",
+            "step3": "Use minimal embed responses",
+            "step4": "Cache frequently requested information"
+          }
+        }
+      }
+    },
+    "monitoring": {
+      "memoryAlerts": {
+        "threshold": "25MB",
+        "action": "Send admin notification"
+      },
+      "responseTimeAlerts": {
+        "threshold": "45ms",
+        "action": "Enable emergency optimization mode"
+      }
+    }
+  },
+
+  "statbot": {
+    "botId": "491769129318088714",
+    "currentIssues": {
+      "memoryUsage": "21.58MB (within limits)",
+      "responseTime": "95.34ms (exceeds 50ms limit)",
+      "cpuUsage": "1.99% (within limits)"
+    },
+    "optimizations": {
+      "responseTimeOptimization": {
+        "dataCaching": {
+          "enabled": true,
+          "cacheStrategy": "aggressive",
+          "cacheDuration": "1 hour",
+          "precomputedStats": true,
+          "implementation": {
+            "step1": "Go to Statbot dashboard → Performance Settings",
+            "step2": "Enable aggressive caching for statistics",
+            "step3": "Set cache duration to 1 hour for frequently accessed data",
+            "step4": "Enable precomputed statistics generation",
+            "step5": "Configure background cache refresh",
+            "step6": "Enable cache warming for popular statistics"
+          }
+        },
+        "dataAggregation": {
+          "batchProcessing": true,
+          "scheduledUpdates": "every 15 minutes",
+          "realTimeDisabled": false,
+          "implementation": {
+            "step1": "Enable batch processing for statistics updates",
+            "step2": "Change real-time updates to 15-minute intervals",
+            "step3": "Configure background data aggregation",
+            "step4": "Keep critical real-time stats but batch non-critical ones"
+          }
+        },
+        "databaseOptimization": {
+          "indexOptimization": true,
+          "queryOptimization": true,
+          "connectionPooling": true,
+          "implementation": {
+            "step1": "Review and optimize database queries",
+            "step2": "Add indexes for frequently accessed data",
+            "step3": "Enable database connection pooling",
+            "step4": "Configure query result caching",
+            "step5": "Use read replicas for statistics generation"
+          }
+        }
+      },
+      "dataFiltering": {
+        "reducedDataCollection": {
+          "excludeVoiceChannelData": true,
+          "limitMessageHistory": "7 days",
+          "excludeReactionData": true,
+          "implementation": {
+            "step1": "Disable voice channel activity tracking",
+            "step2": "Limit message history analysis to 7 days",
+            "step3": "Disable reaction tracking to reduce data volume",
+            "step4": "Focus only on essential cannabis education metrics"
+          }
+        }
+      }
+    },
+    "monitoring": {
+      "responseTimeAlerts": {
+        "threshold": "45ms",
+        "action": "Enable emergency caching mode"
+      },
+      "queryPerformanceAlerts": {
+        "threshold": "100ms per query",
+        "action": "Optimize query execution plan"
+      }
+    }
+  },
+
+  "globalPerformanceSettings": {
+    "monitoringInterval": "5 minutes",
+    "alertThresholds": {
+      "memory": "28MB",
+      "responseTime": "45ms",
+      "cpu": "2.5%"
+    },
+    "emergencyActions": {
+      "automaticOptimization": true,
+      "adminNotification": true,
+      "gracefulDegradation": true
+    },
+    "implementation": {
+      "step1": "Set up centralized performance monitoring",
+      "step2": "Configure automated alerts for threshold breaches",
+      "step3": "Enable automatic optimization modes",
+      "step4": "Create performance degradation response procedures"
+    }
+  },
+
+  "performanceTestingProcedures": {
+    "loadTesting": {
+      "simulateHighActivity": {
+        "messagesPerMinute": 100,
+        "concurrentUsers": 50,
+        "duration": "10 minutes"
+      },
+      "monitorMetrics": [
+        "memory usage", "response time", "cpu usage",
+        "database query time", "cache hit ratio"
+      ]
+    },
+    "benchmarking": {
+      "baselineMetrics": {
+        "xenonMemory": "36.72MB → Target: <25MB",
+        "xenonResponseTime": "71.79ms → Target: <45ms",
+        "statbotResponseTime": "95.34ms → Target: <45ms"
+      },
+      "targetMetrics": {
+        "xenonMemory": "<25MB",
+        "xenonResponseTime": "<45ms",
+        "statbotResponseTime": "<45ms",
+        "overallComplianceScore": ">=95%"
+      }
+    }
+  },
+
+  "rollbackProcedures": {
+    "xenonRollback": {
+      "restoreSettings": [
+        "Revert backup frequency to daily",
+        "Disable selective backup exclusions",
+        "Restore full in-memory caching",
+        "Re-enable all status commands"
+      ],
+      "timeEstimate": "5 minutes"
+    },
+    "statbotRollback": {
+      "restoreSettings": [
+        "Disable aggressive caching",
+        "Restore real-time statistics updates",
+        "Re-enable voice channel tracking",
+        "Remove query optimization limits"
+      ],
+      "timeEstimate": "3 minutes"
+    },
+    "emergencyContact": {
+      "adminNotification": "Immediate Slack alert",
+      "escalationTime": "15 minutes",
+      "fallbackAction": "Temporary bot suspension if performance critical"
+    }
+  }
+}
