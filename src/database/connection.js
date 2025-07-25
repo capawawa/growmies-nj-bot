@@ -208,6 +208,7 @@ function initializeAllModels() {
     const { GuildSettings, initGuildSettingsModel } = require('./models/GuildSettings');
     const { InstagramPost, initInstagramPostModel } = require('./models/InstagramPost');
     const { BotStatus, initBotStatusModel } = require('./models/BotStatus');
+    const { ModerationCase, initModerationCaseModel } = require('./models/ModerationCase');
 
     // Initialize models with sequelize instance
     const UserModel = initUserModel(sequelize);
@@ -215,6 +216,7 @@ function initializeAllModels() {
     const GuildSettingsModel = initGuildSettingsModel(sequelize);
     const InstagramPostModel = initInstagramPostModel(sequelize);
     const BotStatusModel = initBotStatusModel(sequelize);
+    const ModerationCaseModel = initModerationCaseModel(sequelize);
 
     console.log('[Database] ✅ All models initialized successfully');
     
@@ -223,7 +225,8 @@ function initializeAllModels() {
       AuditLog: AuditLogModel,
       GuildSettings: GuildSettingsModel,
       InstagramPost: InstagramPostModel,
-      BotStatus: BotStatusModel
+      BotStatus: BotStatusModel,
+      ModerationCase: ModerationCaseModel
     };
   } catch (error) {
     console.error('[Database] ❌ Model initialization failed:', error.message);

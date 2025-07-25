@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-07-25T11:46:14.341Z",
+  "overallCompliance": 45,
+  "botReports": {
+    "carl-bot": {
+      "compliant": false,
+      "score": 40,
+      "violations": [
+        "Missing forbidden keywords configuration",
+        "Missing age zone requirements",
+        "Missing required compliance rule: automodCannabisRules",
+        "Missing required compliance rule: reactionRoles",
+        "Missing required compliance rule: customCommands",
+        "Missing required compliance rule: illegalContentBlocking"
+      ],
+      "lastUpdated": "2025-07-24T01:09:23.016Z"
+    },
+    "sesh": {
+      "compliant": false,
+      "score": 40,
+      "violations": [
+        "Missing forbidden keywords configuration",
+        "Missing age zone requirements",
+        "Missing required compliance rule: growSessionEvents",
+        "Missing required compliance rule: harvestCelebrations",
+        "Missing required compliance rule: educationalWorkshops",
+        "Missing required compliance rule: noConsumptionEvents"
+      ],
+      "lastUpdated": "2025-07-24T01:09:23.020Z"
+    },
+    "statbot": {
+      "compliant": false,
+      "score": 50,
+      "violations": [
+        "Missing forbidden keywords configuration",
+        "Missing age zone requirements",
+        "Missing required compliance rule: trackEducationalContent",
+        "Missing required compliance rule: analyticsPrivacy",
+        "Missing required compliance rule: engagementMetrics"
+      ],
+      "lastUpdated": "2025-07-24T01:09:23.010Z"
+    },
+    "xenon": {
+      "compliant": false,
+      "score": 50,
+      "violations": [
+        "Missing forbidden keywords configuration",
+        "Missing age zone requirements",
+        "Missing required compliance rule: backupSensitiveData",
+        "Missing required compliance rule: automatedSchedule",
+        "Missing required compliance rule: rollbackCapability"
+      ],
+      "lastUpdated": "2025-07-24T01:09:23.005Z"
+    }
+  },
+  "summary": {
+    "totalBots": 4,
+    "compliantBots": 0,
+    "nonCompliantBots": 4,
+    "criticalViolations": [
+      "carl-bot: Missing forbidden keywords configuration",
+      "carl-bot: Missing age zone requirements",
+      "carl-bot: Missing required compliance rule: automodCannabisRules",
+      "carl-bot: Missing required compliance rule: reactionRoles",
+      "carl-bot: Missing required compliance rule: customCommands",
+      "carl-bot: Missing required compliance rule: illegalContentBlocking",
+      "sesh: Missing forbidden keywords configuration",
+      "sesh: Missing age zone requirements",
+      "sesh: Missing required compliance rule: growSessionEvents",
+      "sesh: Missing required compliance rule: harvestCelebrations",
+      "sesh: Missing required compliance rule: educationalWorkshops",
+      "sesh: Missing required compliance rule: noConsumptionEvents",
+      "statbot: Missing forbidden keywords configuration",
+      "statbot: Missing age zone requirements",
+      "statbot: Missing required compliance rule: trackEducationalContent",
+      "statbot: Missing required compliance rule: analyticsPrivacy",
+      "statbot: Missing required compliance rule: engagementMetrics",
+      "xenon: Missing forbidden keywords configuration",
+      "xenon: Missing age zone requirements",
+      "xenon: Missing required compliance rule: backupSensitiveData",
+      "xenon: Missing required compliance rule: automatedSchedule",
+      "xenon: Missing required compliance rule: rollbackCapability"
+    ]
+  }
+}
