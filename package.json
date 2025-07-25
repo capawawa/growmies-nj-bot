@@ -27,9 +27,11 @@
     "discord.js": "^14.14.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "@sequelize/core": "^7.0.0-alpha.37",
     "sequelize": "^6.37.7",
     "pg": "^8.12.0",
-    "pg-hstore": "^2.3.4"
+    "pg-hstore": "^2.3.4",
+    "joi": "^17.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
@@ -37,6 +39,6 @@
     "@types/jest": "^29.5.8"
   },
   "engines": {
-    "node": ">=16.11.0"
+    "node": ">=18.0.0"
   }
 }
