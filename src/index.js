@@ -7,13 +7,11 @@ require('dotenv').config();
 const HealthMonitor = require('./health');
 
 // Import database components
-const { sequelize, testConnection } = require('./database/connection');
-const { User } = require('./database/models/User');
-const { AuditLog } = require('./database/models/AuditLog');
-const { GuildSettings } = require('./database/models/GuildSettings');
-const { InstagramPost } = require('./database/models/InstagramPost');
-const { BotStatus } = require('./database/models/BotStatus');
-const { LevelingConfig } = require('./database/models/LevelingConfig');
+const { sequelize, testConnection, initializeAllModels } = require('./database/connection');
+
+// Initialize models with sequelize instance
+const models = initializeAllModels();
+const { User, AuditLog, GuildSettings, InstagramPost, BotStatus, LevelingConfig } = models;
 
 // Import Instagram RSS service
 const instagramRssService = require('./services/instagramRss');

@@ -1,0 +1,442 @@
+[Database] Using development configuration...
+
+✅ Loaded command: verify from age-verification/verify.js
+
+✅ Loaded command: 8ball from engagement/8ball.js
+
+✅ Loaded command: celebrate from engagement/celebrate.js
+
+✅ Loaded command: coinflip from engagement/coinflip.js
+
+✅ Loaded command: compliment from engagement/compliment.js
+
+✅ Loaded command: daily-challenge from engagement/daily-challenge.js
+
+✅ Loaded command: dice from engagement/dice.js
+
+✅ Loaded command: quiz from engagement/quiz.js
+
+✅ Loaded command: strain-guess from engagement/strain-guess.js
+
+✅ Loaded command: strain-info from engagement/strain-info.js
+
+✅ Loaded command: suggest from engagement/suggest.js
+
+✅ Loaded command: vote from engagement/vote.js
+
+✅ Loaded command: would-you-rather from engagement/would-you-rather.js
+
+❌ Error loading command /app/src/commands/leveling/leaderboard.js: Error: Cannot find module '@sequelize/core'
+
+Require stack:
+
+- /app/src/commands/leveling/leaderboard.js
+
+- /app/src/index.js
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+
+    at require (node:internal/modules/helpers:177:18)
+
+    at Object.<anonymous> (/app/src/commands/leveling/leaderboard.js:11:16)
+
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19) {
+
+  code: 'MODULE_NOT_FOUND',
+
+  requireStack: [ '/app/src/commands/leveling/leaderboard.js', '/app/src/index.js' ]
+
+}
+
+✅ Loaded command: level from leveling/level.js
+
+❌ Error loading command /app/src/commands/moderation/ban.js: Error: Cannot find module 'joi'
+
+Require stack:
+
+- /app/src/services/moderationService.js
+
+- /app/src/commands/moderation/ban.js
+
+- /app/src/index.js
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+
+    at require (node:internal/modules/helpers:177:18)
+
+    at Object.<anonymous> (/app/src/services/moderationService.js:9:13)
+
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19) {
+
+  code: 'MODULE_NOT_FOUND',
+
+  requireStack: [
+
+    '/app/src/services/moderationService.js',
+
+    '/app/src/commands/moderation/ban.js',
+
+    '/app/src/index.js'
+
+  ]
+
+}
+
+❌ Error loading command /app/src/commands/moderation/kick.js: Error: Cannot find module 'joi'
+
+Require stack:
+
+- /app/src/services/moderationService.js
+
+- /app/src/commands/moderation/kick.js
+
+- /app/src/index.js
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+
+    at require (node:internal/modules/helpers:177:18)
+
+    at Object.<anonymous> (/app/src/services/moderationService.js:9:13)
+
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19) {
+
+  code: 'MODULE_NOT_FOUND',
+
+  requireStack: [
+
+    '/app/src/services/moderationService.js',
+
+    '/app/src/commands/moderation/kick.js',
+
+    '/app/src/index.js'
+
+  ]
+
+}
+
+❌ Error loading command /app/src/commands/moderation/purge.js: Error: Cannot find module 'joi'
+
+Require stack:
+
+- /app/src/services/moderationService.js
+
+- /app/src/commands/moderation/purge.js
+
+- /app/src/index.js
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+
+    at require (node:internal/modules/helpers:177:18)
+
+Require stack:
+
+    at Object.<anonymous> (/app/src/services/moderationService.js:9:13)
+
+- /app/src/services/moderationService.js
+
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+
+- /app/src/commands/moderation/timeout.js
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+
+- /app/src/index.js
+
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19) {
+
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+
+  code: 'MODULE_NOT_FOUND',
+
+    at require (node:internal/modules/helpers:177:18)
+
+  requireStack: [
+
+    at Object.<anonymous> (/app/src/services/moderationService.js:9:13)
+
+    '/app/src/services/moderationService.js',
+
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+
+    '/app/src/commands/moderation/purge.js',
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+
+    '/app/src/index.js'
+
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+
+  ]
+
+}
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19) {
+
+❌ Error loading command /app/src/commands/moderation/timeout.js: Error: Cannot find module 'joi'
+
+  code: 'MODULE_NOT_FOUND',
+
+  requireStack: [
+    '/app/src/services/moderationService.js',
+
+    '/app/src/commands/moderation/timeout.js',
+
+    '/app/src/index.js'
+
+  ]
+
+}
+
+❌ Error loading command /app/src/commands/moderation/unban.js: Error: Cannot find module 'joi'
+
+Require stack:
+
+Require stack:
+
+- /app/src/services/moderationService.js
+
+- /app/src/services/moderationService.js
+
+- /app/src/commands/moderation/unban.js
+
+- /app/src/index.js
+
+- /app/src/commands/moderation/warn.js
+
+- /app/src/index.js
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+
+    at require (node:internal/modules/helpers:177:18)
+
+    at require (node:internal/modules/helpers:177:18)
+
+    at Object.<anonymous> (/app/src/services/moderationService.js:9:13)
+
+    at Object.<anonymous> (/app/src/services/moderationService.js:9:13)
+
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19) {
+
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+
+  code: 'MODULE_NOT_FOUND',
+
+    at Module.require (node:internal/modules/cjs/loader:1231:19) {
+
+  requireStack: [
+
+  code: 'MODULE_NOT_FOUND',
+
+  requireStack: [
+
+    '/app/src/services/moderationService.js',
+
+    '/app/src/services/moderationService.js',
+
+    '/app/src/commands/moderation/unban.js',
+
+    '/app/src/commands/moderation/warn.js',
+
+    '/app/src/index.js'
+
+    '/app/src/index.js'
+
+  ]
+
+  ]
+
+}
+
+✅ Loaded command: ping from utility/ping.js
+
+}
+
+❌ Error loading command /app/src/commands/moderation/warn.js: Error: Cannot find module 'joi'
+
+✅ Loaded command: server from utility/server.js
+
+✅ Loaded event: guildMemberAdd from guildMemberAdd.js
+
+✅ Loaded event: interactionCreate from interactionCreate.js
+
+✅ Loaded event: messageCreate from messageCreate.js
+
+✅ Loaded event: ready from ready.js
+
+📷 Instagram webhook routes mounted at /instagram
+
+🌱 Starting GrowmiesNJ Discord Bot...
+
+📊 Bot Version: 1.0.0
+
+🌍 Environment: production
+
+🤖 Discord connection established
+
+🚀 Bot is ready! Logged in as GrowmiesSprout 🌱#0151
+
+📊 Connected to 1 guild(s)
+
+👥 Serving 1 user(s)
+
+📝 Loaded 16 command(s)
+
+🏗️ Setting up welcome channels...
+
+📍 Found welcome channel: welcome
+
+🗄️ Initializing database connection...
+
+📋 Welcome embeds already exist in welcome for Growmies NJ
+
+✅ Welcome channel setup completed
+
+✅ Growmies NJ Bot initialization complete!
+
+[Database] ❌ Connection failed: connect ECONNREFUSED ::1:5432
+
+[Database] 🔄 Retrying connection... (3 attempts remaining)
+
+[Database] ❌ Connection failed: connect ECONNREFUSED ::1:5432
+
+[Database] 🔄 Retrying connection... (2 attempts remaining)
+
+[Database] 🔄 Retrying connection... (1 attempts remaining)
+
+[Database] ❌ Connection failed: connect ECONNREFUSED ::1:5432
+
+[Database] ❌ Connection failed: connect ECONNREFUSED ::1:5432
+
+[Database] 💥 All connection attempts failed
+
+✅ Database connection established successfully
+
+❌ Database initialization failed: ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+
+    at Client._connectionCallback (/app/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:133:24)
+
+    at Client._handleErrorWhileConnecting (/app/node_modules/pg/lib/client.js:336:19)
+
+    at Client._handleErrorEvent (/app/node_modules/pg/lib/client.js:346:19)
+
+    at Connection.emit (node:events:517:28)
+
+    at Socket.reportStreamError (/app/node_modules/pg/lib/connection.js:57:12)
+
+    at Socket.emit (node:events:517:28)
+
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+
+  parent: Error: connect ECONNREFUSED ::1:5432
+
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
+
+    errno: -111,
+
+    code: 'ECONNREFUSED',
+
+    syscall: 'connect',
+
+    address: '::1',
+
+    port: 5432
+
+  },
+
+  original: Error: connect ECONNREFUSED ::1:5432
+
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
+
+    errno: -111,
+
+    code: 'ECONNREFUSED',
+
+    syscall: 'connect',
+
+    address: '::1',
+
+    port: 5432
+
+  }
+
+}
+
+🚨 CRITICAL: Bot cannot start without database connection
