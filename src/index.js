@@ -8,12 +8,12 @@ const HealthMonitor = require('./health');
 
 // Import database components
 const { sequelize, testConnection } = require('./database/connection');
-const User = require('./database/models/User');
-const AuditLog = require('./database/models/AuditLog');
-const GuildSettings = require('./database/models/GuildSettings');
-const InstagramPost = require('./database/models/InstagramPost');
-const BotStatus = require('./database/models/BotStatus');
-const LevelingConfig = require('./database/models/LevelingConfig');
+const { User } = require('./database/models/User');
+const { AuditLog } = require('./database/models/AuditLog');
+const { GuildSettings } = require('./database/models/GuildSettings');
+const { InstagramPost } = require('./database/models/InstagramPost');
+const { BotStatus } = require('./database/models/BotStatus');
+const { LevelingConfig } = require('./database/models/LevelingConfig');
 
 // Import Instagram RSS service
 const instagramRssService = require('./services/instagramRss');
