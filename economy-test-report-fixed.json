@@ -1,0 +1,169 @@
+{
+  "timestamp": "2025-07-26T13:46:39.979Z",
+  "summary": {
+    "total": 31,
+    "passed": 31,
+    "failed": 0,
+    "warnings": 0,
+    "successRate": "100.0"
+  },
+  "details": [
+    {
+      "test": "File exists: src/database/models/Economy.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.938Z"
+    },
+    {
+      "test": "File exists: src/database/models/EconomyItem.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.940Z"
+    },
+    {
+      "test": "File exists: src/database/models/EconomyTransaction.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.940Z"
+    },
+    {
+      "test": "File exists: src/database/models/UserInventory.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.941Z"
+    },
+    {
+      "test": "File exists: src/database/models/EconomyShop.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.941Z"
+    },
+    {
+      "test": "File exists: src/services/economyService.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.942Z"
+    },
+    {
+      "test": "File exists: src/utils/economyHelpers.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.942Z"
+    },
+    {
+      "test": "File exists: src/commands/economy/balance.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.943Z"
+    },
+    {
+      "test": "File exists: src/commands/economy/daily.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.944Z"
+    },
+    {
+      "test": "File exists: src/commands/economy/shop.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.945Z"
+    },
+    {
+      "test": "File exists: src/commands/economy/inventory.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.946Z"
+    },
+    {
+      "test": "File exists: src/commands/economy/gift.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.947Z"
+    },
+    {
+      "test": "File exists: src/commands/economy/work.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.947Z"
+    },
+    {
+      "test": "File exists: src/commands/economy/leaderboard.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.948Z"
+    },
+    {
+      "test": "File exists: src/database/migrations.js",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.948Z"
+    },
+    {
+      "test": "Economy model structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.952Z"
+    },
+    {
+      "test": "EconomyItem model structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.953Z"
+    },
+    {
+      "test": "EconomyTransaction model structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.955Z"
+    },
+    {
+      "test": "UserInventory model structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.957Z"
+    },
+    {
+      "test": "EconomyShop model structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.958Z"
+    },
+    {
+      "test": "Economy service structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.961Z"
+    },
+    {
+      "test": "Economy helpers structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.962Z"
+    },
+    {
+      "test": "balance command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.965Z"
+    },
+    {
+      "test": "daily command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.966Z"
+    },
+    {
+      "test": "shop command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.967Z"
+    },
+    {
+      "test": "inventory command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.968Z"
+    },
+    {
+      "test": "gift command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.970Z"
+    },
+    {
+      "test": "work command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.972Z"
+    },
+    {
+      "test": "leaderboard command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.973Z"
+    },
+    {
+      "test": "Cannabis compliance validation",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.976Z"
+    },
+    {
+      "test": "System integrations validation",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:46:39.978Z"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

@@ -393,7 +393,7 @@ module.exports = {
         const verifyButton = new ActionRowBuilder()
           .addComponents(
             new ButtonBuilder()
-              .setCustomId('age_verification_start')
+              .setCustomId('age_verify_start')
               .setLabel('🔞 Verify Age (21+)')
               .setStyle(ButtonStyle.Primary)
           );

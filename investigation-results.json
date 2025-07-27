@@ -1,0 +1,523 @@
+{
+  "guildId": "1390722668025872504",
+  "guildName": "Growmies NJ",
+  "investigatedAt": "2025-07-26T03:30:13.759Z",
+  "totalChannels": 28,
+  "currentlyConfiguredChannels": {
+    "Welcome & Info:welcome": "1398488113223045152",
+    "Welcome & Info:rules": "1398488114485395568",
+    "Welcome & Info:age-verification": "1398488115307483277",
+    "Welcome & Info:education-resources": "1398488116251201577",
+    "General Community:general-chat": "1398488117417218180",
+    "General Community:gaming-entertainment": "1398488117828260002",
+    "General Community:photos-memes": "1398488118897672313",
+    "Cannabis 21+:strain-discussions": "1398488120332259398",
+    "Cannabis 21+:growing-tips": "1398488121028378717",
+    "Cannabis 21+:dispensary-reviews": "1398488122190200943",
+    "Cannabis 21+:harvest-showcase": "1398488122970472642",
+    "Cannabis 21+:medical-cannabis": "1398488124748988436"
+  },
+  "allChannels": [
+    {
+      "id": "1398488114485395568",
+      "name": "📋-rules-and-compliance",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488110517719150",
+        "name": "🌿 WELCOME & INFO"
+      },
+      "position": 1,
+      "createdAt": "2025-07-26T02:12:29.146Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:29 PM",
+      "topic": "📋 Community rules and cannabis compliance information. Must be 18+ to participate, 21+ for cannabis content. 🔞",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398500991833346050",
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1390722668948623398",
+      "name": "meeting-plans",
+      "type": "GuildText",
+      "category": {
+        "id": "1390722668948623396",
+        "name": "Text Channels"
+      },
+      "position": 1,
+      "createdAt": "2025-07-04T15:55:22.655Z",
+      "createdDate": "7/4/2025",
+      "createdTime": "11:55:22 AM",
+      "topic": null,
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1398488113223045152",
+      "name": "👋-welcome",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488110517719150",
+        "name": "🌿 WELCOME & INFO"
+      },
+      "position": 0,
+      "createdAt": "2025-07-26T02:12:28.845Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:28 PM",
+      "topic": "🌿 Welcome to GrowmiesNJ! Please read the rules and verify your age. 🔞 Adult community for cannabis enthusiasts.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1398488115307483277",
+      "name": "🔞-age-verification",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488110517719150",
+        "name": "🌿 WELCOME & INFO"
+      },
+      "position": 2,
+      "createdAt": "2025-07-26T02:12:29.342Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:29 PM",
+      "topic": "🔞 Age verification required. Must be 18+ for general access, 21+ for cannabis discussions. Educational purposes only.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398500993205010564",
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1397725032200802304",
+      "name": "welcome",
+      "type": "GuildText",
+      "category": {
+        "id": "1397725024634409022",
+        "name": "General"
+      },
+      "position": 0,
+      "createdAt": "2025-07-23T23:40:16.152Z",
+      "createdDate": "7/23/2025",
+      "createdTime": "7:40:16 PM",
+      "topic": "Welcome to Growmies NJ! 🌱",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398112037242142760",
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1398488118897672313",
+      "name": "📸-photos-and-memes",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111201128589",
+        "name": "💬 GENERAL COMMUNITY (18+)"
+      },
+      "position": 2,
+      "createdAt": "2025-07-26T02:12:30.198Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:30 PM",
+      "topic": "📸 Share photos and memes (non-cannabis). Keep cannabis images in 21+ channels. 18+ verified members only.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1398488121028378717",
+      "name": "🌿-growing-tips",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111918481439",
+        "name": "🌱 CANNABIS DISCUSSION (21+)"
+      },
+      "position": 1,
+      "createdAt": "2025-07-26T02:12:30.706Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:30 PM",
+      "topic": "🌿 21+ only - Cannabis cultivation discussion. Follow NJ regulations. Home grow educational content only.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398500995763273759",
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1398488116251201577",
+      "name": "📚-education-and-resources",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488110517719150",
+        "name": "🌿 WELCOME & INFO"
+      },
+      "position": 3,
+      "createdAt": "2025-07-26T02:12:29.567Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:29 PM",
+      "topic": "📚 Educational resources about cannabis, health, and responsible use. 18+ educational content only.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1398488122970472642",
+      "name": "📊-harvest-showcase",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111918481439",
+        "name": "🌱 CANNABIS DISCUSSION (21+)"
+      },
+      "position": 3,
+      "createdAt": "2025-07-26T02:12:31.169Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:31 PM",
+      "topic": "📊 21+ only - Share your harvest and growing results. NJ compliant grows only. Educational documentation.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1398488124748988436",
+      "name": "⚕️-medical-cannabis",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111918481439",
+        "name": "🌱 CANNABIS DISCUSSION (21+)"
+      },
+      "position": 4,
+      "createdAt": "2025-07-26T02:12:31.593Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:31 PM",
+      "topic": "⚕️ 21+ only - Medical cannabis discussion. Not medical advice. Consult healthcare providers. Educational purposes.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1398488117417218180",
+      "name": "💬-general-chat",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111201128589",
+        "name": "💬 GENERAL COMMUNITY (18+)"
+      },
+      "position": 0,
+      "createdAt": "2025-07-26T02:12:29.845Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:29 PM",
+      "topic": "💬 General discussion for verified 18+ members. Keep cannabis discussions in appropriate 21+ channels.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398500994832142428",
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1390722668948623399",
+      "name": "off-topic",
+      "type": "GuildText",
+      "category": {
+        "id": "1390722668948623396",
+        "name": "Text Channels"
+      },
+      "position": 2,
+      "createdAt": "2025-07-04T15:55:22.655Z",
+      "createdDate": "7/4/2025",
+      "createdTime": "11:55:22 AM",
+      "topic": null,
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1394895574733426729",
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1390722668948623395",
+      "name": "resources",
+      "type": "GuildText",
+      "category": {
+        "id": "1390722668948623392",
+        "name": "Information"
+      },
+      "position": 2,
+      "createdAt": "2025-07-04T15:55:22.655Z",
+      "createdDate": "7/4/2025",
+      "createdTime": "11:55:22 AM",
+      "topic": null,
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1397725067068047453",
+      "name": "growing-discussion",
+      "type": "GuildText",
+      "category": {
+        "id": "1397725061506404395",
+        "name": "Cannabis 21+"
+      },
+      "position": 0,
+      "createdAt": "2025-07-23T23:40:24.465Z",
+      "createdDate": "7/23/2025",
+      "createdTime": "7:40:24 PM",
+      "topic": "Cannabis growing discussions - 21+ only",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398498428740440075",
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1398488117828260002",
+      "name": "🎮-gaming-and-entertainment",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111201128589",
+        "name": "💬 GENERAL COMMUNITY (18+)"
+      },
+      "position": 1,
+      "createdAt": "2025-07-26T02:12:29.943Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:29 PM",
+      "topic": "🎮 Gaming, movies, music, and entertainment discussion. 18+ verified members only.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1397725077331775549",
+      "name": "nj-dispensaries",
+      "type": "GuildText",
+      "category": {
+        "id": "1397725061506404395",
+        "name": "Cannabis 21+"
+      },
+      "position": 1,
+      "createdAt": "2025-07-23T23:40:26.912Z",
+      "createdDate": "7/23/2025",
+      "createdTime": "7:40:26 PM",
+      "topic": "NJ dispensary reviews",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1397725045018857482",
+      "name": "age-verification",
+      "type": "GuildText",
+      "category": {
+        "id": "1397725024634409022",
+        "name": "General"
+      },
+      "position": 2,
+      "createdAt": "2025-07-23T23:40:19.208Z",
+      "createdDate": "7/23/2025",
+      "createdTime": "7:40:19 PM",
+      "topic": "Verify your age (21+) here",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398498427255525396",
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1398488129043959931",
+      "name": "🔧-staff-general",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488112539373700",
+        "name": "🔧 MODERATION & STAFF"
+      },
+      "position": 0,
+      "createdAt": "2025-07-26T02:12:32.617Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:32 PM",
+      "topic": "🔧 Staff communication and coordination. Compliance monitoring and community management.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1398488122190200943",
+      "name": "🏪-dispensary-reviews",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111918481439",
+        "name": "🌱 CANNABIS DISCUSSION (21+)"
+      },
+      "position": 2,
+      "createdAt": "2025-07-26T02:12:30.983Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:30 PM",
+      "topic": "🏪 21+ only - NJ dispensary reviews and recommendations. Licensed dispensaries only. Educational purposes.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1398488120332259398",
+      "name": "🌱-strain-discussions",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488111918481439",
+        "name": "🌱 CANNABIS DISCUSSION (21+)"
+      },
+      "position": 0,
+      "createdAt": "2025-07-26T02:12:30.540Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:30 PM",
+      "topic": "🌱 21+ only - Discuss cannabis strains, effects, and experiences. NJ medical/recreational only. Educational purposes.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": true
+    },
+    {
+      "id": "1397725039444623440",
+      "name": "rules",
+      "type": "GuildText",
+      "category": {
+        "id": "1397725024634409022",
+        "name": "General"
+      },
+      "position": 1,
+      "createdAt": "2025-07-23T23:40:17.879Z",
+      "createdDate": "7/23/2025",
+      "createdTime": "7:40:17 PM",
+      "topic": "Server rules - Must be 21+ for cannabis content",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398498425070293054",
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1390722668948623394",
+      "name": "announcements",
+      "type": "GuildText",
+      "category": {
+        "id": "1390722668948623392",
+        "name": "Information"
+      },
+      "position": 1,
+      "createdAt": "2025-07-04T15:55:22.655Z",
+      "createdDate": "7/4/2025",
+      "createdTime": "11:55:22 AM",
+      "topic": null,
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1398475280753889422",
+      "name": "bot-testing",
+      "type": "GuildText",
+      "category": null,
+      "position": 0,
+      "createdAt": "2025-07-26T01:21:29.346Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "9:21:29 PM",
+      "topic": "Automated integration testing for GrowmiesNJ bot",
+      "nsfw": true,
+      "messageCount": null,
+      "lastMessageId": "1398475431820398729",
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1390722668948623393",
+      "name": "welcome-and-rules",
+      "type": "GuildText",
+      "category": {
+        "id": "1390722668948623392",
+        "name": "Information"
+      },
+      "position": 0,
+      "createdAt": "2025-07-04T15:55:22.655Z",
+      "createdDate": "7/4/2025",
+      "createdTime": "11:55:22 AM",
+      "topic": null,
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1398488129702203514",
+      "name": "📋-audit-logs",
+      "type": "GuildText",
+      "category": {
+        "id": "1398488112539373700",
+        "name": "🔧 MODERATION & STAFF"
+      },
+      "position": 1,
+      "createdAt": "2025-07-26T02:12:32.774Z",
+      "createdDate": "7/25/2025",
+      "createdTime": "10:12:32 PM",
+      "topic": "📋 Automated audit logs and compliance monitoring. Age verification tracking and violation reports.",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1397725072101343445",
+      "name": "strain-reviews",
+      "type": "GuildText",
+      "category": {
+        "id": "1397725061506404395",
+        "name": "Cannabis 21+"
+      },
+      "position": 2,
+      "createdAt": "2025-07-23T23:40:25.665Z",
+      "createdDate": "7/23/2025",
+      "createdTime": "7:40:25 PM",
+      "topic": "Share strain reviews - 21+ only",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": null,
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1397725050794279087",
+      "name": "general-chat",
+      "type": "GuildText",
+      "category": {
+        "id": "1397725024634409022",
+        "name": "General"
+      },
+      "position": 3,
+      "createdAt": "2025-07-23T23:40:20.585Z",
+      "createdDate": "7/23/2025",
+      "createdTime": "7:40:20 PM",
+      "topic": "General conversation",
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1398498427972616263",
+      "isCurrentlyConfigured": false
+    },
+    {
+      "id": "1390722668948623397",
+      "name": "general",
+      "type": "GuildText",
+      "category": {
+        "id": "1390722668948623396",
+        "name": "Text Channels"
+      },
+      "position": 0,
+      "createdAt": "2025-07-04T15:55:22.655Z",
+      "createdDate": "7/4/2025",
+      "createdTime": "11:55:22 AM",
+      "topic": null,
+      "nsfw": false,
+      "messageCount": null,
+      "lastMessageId": "1395028011887366215",
+      "isCurrentlyConfigured": false
+    }
+  ]
+}

@@ -2,18 +2,9 @@
   "guildId": "1390722668025872504",
   "guildName": "Growmies NJ",
   "memberCount": 7,
-  "configuredAt": "2025-07-23T23:40:26.479Z",
-  "roles": {
-    "Admin": "1397724990865936467",
-    "Mod Team": "1397724996087971883",
-    "Verified 21+": "1397725004564791410",
-    "Growmie": "1397725010046750823"
-  },
-  "categories": {
-    "General": "1397725024634409022",
-    "Cannabis 21+": "1397725061506404395"
-  },
-  "channels": {
+  "configuredAt": "2025-07-26T03:02:00.000Z",
+  "correctedChannels": true,
+  "previousWrongChannels": {
     "General:welcome": "1397725032200802304",
     "General:rules": "1397725039444623440",
     "General:age-verification": "1397725045018857482",
@@ -21,5 +12,31 @@
     "Cannabis 21+:growing-discussion": "1397725067068047453",
     "Cannabis 21+:strain-reviews": "1397725072101343445",
     "Cannabis 21+:nj-dispensaries": "1397725077331775549"
+  },
+  "roles": {
+    "Admin": "1397724990865936467",
+    "Mod Team": "1397724996087971883",
+    "Verified 21+": "1397725004564791410",
+    "Growmie": "1397725010046750823"
+  },
+  "categories": {
+    "Welcome & Info": "1398488110517719150",
+    "General Community (18+)": "1398488111201128589",
+    "Cannabis Discussion (21+)": "1398488111918481439",
+    "Moderation & Staff": "1398488112539373700"
+  },
+  "channels": {
+    "Welcome & Info:welcome": "1398488113223045152",
+    "Welcome & Info:rules": "1398488114485395568",
+    "Welcome & Info:age-verification": "1398488115307483277",
+    "Welcome & Info:education-resources": "1398488116251201577",
+    "General Community:general-chat": "1398488117417218180",
+    "General Community:gaming-entertainment": "1398488117828260002",
+    "General Community:photos-memes": "1398488118897672313",
+    "Cannabis 21+:strain-discussions": "1398488120332259398",
+    "Cannabis 21+:growing-tips": "1398488121028378717",
+    "Cannabis 21+:dispensary-reviews": "1398488122190200943",
+    "Cannabis 21+:harvest-showcase": "1398488122970472642",
+    "Cannabis 21+:medical-cannabis": "1398488124748988436"
   }
 }

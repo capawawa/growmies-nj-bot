@@ -1,7 +1,7 @@
 {
   "deployment": {
-    "startTime": "2025-07-25T11:41:56.615Z",
-    "endTime": "2025-07-25T11:41:58.966Z",
+    "startTime": "2025-07-26T02:39:54.515Z",
+    "endTime": "2025-07-26T02:39:56.882Z",
     "duration": "2s",
     "success": false
   },
@@ -75,10 +75,10 @@
     }
   },
   "logs": [
-    "[2025-07-25T11:41:56.615Z] INFO: 🎯 Starting GrowmiesNJ Third-Party Bot Integration Deployment",
-    "[2025-07-25T11:41:56.623Z] INFO: 🔍 Validating deployment environment...",
-    "[2025-07-25T11:41:58.964Z] ERROR: ❌ Environment validation failed: GrowmiesSprout bot appears to be offline",
-    "[2025-07-25T11:41:58.966Z] ERROR: ❌ Deployment aborted due to environment validation failures"
+    "[2025-07-26T02:39:54.515Z] INFO: 🎯 Starting GrowmiesNJ Third-Party Bot Integration Deployment",
+    "[2025-07-26T02:39:54.522Z] INFO: 🔍 Validating deployment environment...",
+    "[2025-07-26T02:39:56.881Z] ERROR: ❌ Environment validation failed: GrowmiesSprout bot appears to be offline",
+    "[2025-07-26T02:39:56.882Z] ERROR: ❌ Deployment aborted due to environment validation failures"
   ],
   "errors": [
     "GrowmiesSprout bot appears to be offline"

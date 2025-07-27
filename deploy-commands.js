@@ -36,7 +36,7 @@ if (fs.existsSync(foldersPath)) {
 }
 
 // Construct and prepare an instance of the REST module
-const rest = new REST().setToken(process.env.DISCORD_TOKEN);
+const rest = new REST().setToken(process.env.DISCORD_BOT_TOKEN);
 
 // Deploy commands function
 async function deployCommands() {
@@ -44,21 +44,21 @@ async function deployCommands() {
         console.log(`🚀 Started refreshing ${commands.length} application (/) commands.`);
 
         // Check if we have required environment variables
-        if (!process.env.DISCORD_TOKEN) {
-            throw new Error('DISCORD_TOKEN is required in environment variables');
+        if (!process.env.DISCORD_BOT_TOKEN) {
+            throw new Error('DISCORD_BOT_TOKEN is required in environment variables');
         }
         
-        if (!process.env.CLIENT_ID) {
-            throw new Error('CLIENT_ID is required in environment variables');
+        if (!process.env.DISCORD_CLIENT_ID) {
+            throw new Error('DISCORD_CLIENT_ID is required in environment variables');
         }
 
         let data;
         
-        if (process.env.GUILD_ID) {
+        if (process.env.DISCORD_SERVER_ID) {
             // Guild-specific deployment (for development/testing)
-            console.log(`🎯 Deploying commands to guild: ${process.env.GUILD_ID}`);
+            console.log(`🎯 Deploying commands to guild: ${process.env.DISCORD_SERVER_ID}`);
             data = await rest.put(
-                Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
+                Routes.applicationGuildCommands(process.env.DISCORD_CLIENT_ID, process.env.DISCORD_SERVER_ID),
                 { body: commands },
             );
             console.log(`✅ Successfully reloaded ${data.length} guild application (/) commands.`);
@@ -66,7 +66,7 @@ async function deployCommands() {
             // Global deployment (for production)
             console.log('🌍 Deploying commands globally (this may take up to 1 hour to propagate)');
             data = await rest.put(
-                Routes.applicationCommands(process.env.CLIENT_ID),
+                Routes.applicationCommands(process.env.DISCORD_CLIENT_ID),
                 { body: commands },
             );
             console.log(`✅ Successfully reloaded ${data.length} global application (/) commands.`);

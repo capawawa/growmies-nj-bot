@@ -1,0 +1,745 @@
+{
+  "timestamp": "2025-07-26T03:36:23.829Z",
+  "dryRun": false,
+  "guildInfo": {
+    "id": "1390722668025872504",
+    "name": "Growmies NJ",
+    "memberCount": 7
+  },
+  "cleanupResults": {
+    "success": true,
+    "cleaned": 9,
+    "analysis": {
+      "totalCategories": 9,
+      "totalTextChannels": 24,
+      "totalVoiceChannels": 4,
+      "categories": {
+        "🌱 CANNABIS DISCUSSION (21+)": {
+          "id": "1398488111918481439",
+          "name": "🌱 CANNABIS DISCUSSION (21+)",
+          "channels": [
+            {
+              "id": "1398488121028378717",
+              "name": "🌿-growing-tips",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488122970472642",
+              "name": "📊-harvest-showcase",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488124748988436",
+              "name": "⚕️-medical-cannabis",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488127152324618",
+              "name": "🗣️-cannabis-voice",
+              "type": "GuildVoice"
+            },
+            {
+              "id": "1398488122190200943",
+              "name": "🏪-dispensary-reviews",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488120332259398",
+              "name": "🌱-strain-discussions",
+              "type": "GuildText"
+            }
+          ]
+        },
+        "Text Channels": {
+          "id": "1390722668948623396",
+          "name": "Text Channels",
+          "channels": [
+            {
+              "id": "1390722668948623397",
+              "name": "general",
+              "type": "GuildText"
+            }
+          ]
+        },
+        "Voice Channels": {
+          "id": "1390722668948623400",
+          "name": "Voice Channels",
+          "channels": [
+            {
+              "id": "1390722669212598282",
+              "name": "Meeting Room",
+              "type": "GuildVoice"
+            },
+            {
+              "id": "1390722668948623401",
+              "name": "Lounge",
+              "type": "GuildVoice"
+            }
+          ]
+        },
+        "Cannabis 21+": {
+          "id": "1397725061506404395",
+          "name": "Cannabis 21+",
+          "channels": [
+            {
+              "id": "1397725067068047453",
+              "name": "growing-discussion",
+              "type": "GuildText"
+            },
+            {
+              "id": "1397725077331775549",
+              "name": "nj-dispensaries",
+              "type": "GuildText"
+            },
+            {
+              "id": "1397725072101343445",
+              "name": "strain-reviews",
+              "type": "GuildText"
+            }
+          ]
+        },
+        "💬 GENERAL COMMUNITY (18+)": {
+          "id": "1398488111201128589",
+          "name": "💬 GENERAL COMMUNITY (18+)",
+          "channels": [
+            {
+              "id": "1398488118897672313",
+              "name": "📸-photos-and-memes",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488117417218180",
+              "name": "💬-general-chat",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488119648456754",
+              "name": "🔊-general-voice",
+              "type": "GuildVoice"
+            },
+            {
+              "id": "1398488117828260002",
+              "name": "🎮-gaming-and-entertainment",
+              "type": "GuildText"
+            }
+          ]
+        },
+        "Information": {
+          "id": "1390722668948623392",
+          "name": "Information",
+          "channels": [
+            {
+              "id": "1390722668948623395",
+              "name": "resources",
+              "type": "GuildText"
+            }
+          ]
+        },
+        "General": {
+          "id": "1397725024634409022",
+          "name": "General",
+          "channels": [
+            {
+              "id": "1397725032200802304",
+              "name": "welcome",
+              "type": "GuildText"
+            },
+            {
+              "id": "1397725045018857482",
+              "name": "age-verification",
+              "type": "GuildText"
+            },
+            {
+              "id": "1397725039444623440",
+              "name": "rules",
+              "type": "GuildText"
+            },
+            {
+              "id": "1397725050794279087",
+              "name": "general-chat",
+              "type": "GuildText"
+            }
+          ]
+        },
+        "🔧 MODERATION & STAFF": {
+          "id": "1398488112539373700",
+          "name": "🔧 MODERATION & STAFF",
+          "channels": [
+            {
+              "id": "1398488129043959931",
+              "name": "🔧-staff-general",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488129702203514",
+              "name": "📋-audit-logs",
+              "type": "GuildText"
+            }
+          ]
+        },
+        "🌿 WELCOME & INFO": {
+          "id": "1398488110517719150",
+          "name": "🌿 WELCOME & INFO",
+          "channels": [
+            {
+              "id": "1398488114485395568",
+              "name": "📋-rules-and-compliance",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488113223045152",
+              "name": "👋-welcome",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488115307483277",
+              "name": "🔞-age-verification",
+              "type": "GuildText"
+            },
+            {
+              "id": "1398488116251201577",
+              "name": "📚-education-and-resources",
+              "type": "GuildText"
+            }
+          ]
+        }
+      },
+      "uncategorizedChannels": [
+        {
+          "id": "1398475280753889422",
+          "name": "bot-testing",
+          "type": "GuildText",
+          "messageCount": null
+        }
+      ],
+      "duplicateChannels": [
+        {
+          "id": "1390722668948623397",
+          "name": "general",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "general-chat",
+          "oldCategory": "Text Channels"
+        },
+        {
+          "id": "1397725067068047453",
+          "name": "growing-discussion",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "growing-tips",
+          "oldCategory": "Cannabis 21+"
+        },
+        {
+          "id": "1397725077331775549",
+          "name": "nj-dispensaries",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "dispensary-reviews",
+          "oldCategory": "Cannabis 21+"
+        },
+        {
+          "id": "1397725072101343445",
+          "name": "strain-reviews",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "strain-discussions",
+          "oldCategory": "Cannabis 21+"
+        },
+        {
+          "id": "1390722668948623395",
+          "name": "resources",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "education-and-resources",
+          "oldCategory": "Information"
+        },
+        {
+          "id": "1397725032200802304",
+          "name": "welcome",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "welcome",
+          "oldCategory": "General"
+        },
+        {
+          "id": "1397725045018857482",
+          "name": "age-verification",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "age-verification",
+          "oldCategory": "General"
+        },
+        {
+          "id": "1397725039444623440",
+          "name": "rules",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "rules-and-compliance",
+          "oldCategory": "General"
+        },
+        {
+          "id": "1397725050794279087",
+          "name": "general-chat",
+          "type": "GuildText",
+          "messageCount": null,
+          "mappedTo": "general-chat",
+          "oldCategory": "General"
+        }
+      ],
+      "intendedCategories": [
+        "🌱 CANNABIS DISCUSSION (21+)",
+        "💬 GENERAL COMMUNITY (18+)",
+        "🔧 MODERATION & STAFF",
+        "🌿 WELCOME & INFO"
+      ],
+      "issuesFound": [
+        "Found 9 duplicate channels outside categories",
+        "Found 1 uncategorized channels"
+      ]
+    },
+    "results": [
+      {
+        "channel": "general",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "general-chat"
+      },
+      {
+        "channel": "growing-discussion",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "growing-tips"
+      },
+      {
+        "channel": "nj-dispensaries",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "dispensary-reviews"
+      },
+      {
+        "channel": "strain-reviews",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "strain-discussions"
+      },
+      {
+        "channel": "resources",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "education-and-resources"
+      },
+      {
+        "channel": "welcome",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "welcome"
+      },
+      {
+        "channel": "age-verification",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "age-verification"
+      },
+      {
+        "channel": "rules",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "rules-and-compliance"
+      },
+      {
+        "channel": "general-chat",
+        "success": true,
+        "action": "deleted",
+        "reason": "Duplicate channel removed - equivalent exists in proper categories",
+        "messagesMoved": 0,
+        "targetMapping": "general-chat"
+      }
+    ]
+  },
+  "verification": {
+    "passed": true,
+    "issues": [
+      "🌿 WELCOME & INFO: Missing channels - welcome, rules-and-compliance, age-verification, education-and-resources",
+      "💬 GENERAL COMMUNITY (18+): Missing channels - general-chat, gaming-and-entertainment, photos-and-memes, general-voice",
+      "🌱 CANNABIS DISCUSSION (21+): Missing channels - strain-discussions, growing-tips, dispensary-reviews, harvest-showcase, medical-cannabis, cannabis-voice",
+      "🔧 MODERATION & STAFF: Missing channels - staff-general, audit-logs"
+    ],
+    "categoriesPresent": 4,
+    "categoriesExpected": 4,
+    "duplicateChannelsRemaining": 0,
+    "uncategorizedChannels": 1
+  },
+  "operationLog": [
+    {
+      "timestamp": "2025-07-26T03:36:01.552Z",
+      "level": "INFO",
+      "message": "🚀 Initializing Discord Channel Cleanup System"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.101Z",
+      "level": "SUCCESS",
+      "message": "✅ Discord client logged in successfully"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.107Z",
+      "level": "SUCCESS",
+      "message": "✅ Discord client ready and cache populated"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.108Z",
+      "level": "SUCCESS",
+      "message": "✅ Connected to guild: Growmies NJ (ID: 1390722668025872504)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.108Z",
+      "level": "INFO",
+      "message": "🧹 Starting Discord channel cleanup process..."
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.109Z",
+      "level": "INFO",
+      "message": "🔍 Analyzing current Discord server structure..."
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.110Z",
+      "level": "INFO",
+      "message": "📊 Analysis complete:"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.111Z",
+      "level": "INFO",
+      "message": "   Categories: 9"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.111Z",
+      "level": "INFO",
+      "message": "   Text Channels: 24"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.111Z",
+      "level": "INFO",
+      "message": "   Voice Channels: 4"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.112Z",
+      "level": "INFO",
+      "message": "   Intended Categories Found: 4/4"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.112Z",
+      "level": "INFO",
+      "message": "   Duplicate Channels: 9"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.112Z",
+      "level": "INFO",
+      "message": "   Issues Found: 2"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.112Z",
+      "level": "INFO",
+      "message": "🔧 Found 9 duplicate channels to clean up:"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.112Z",
+      "level": "INFO",
+      "message": "   - #general → should map to general-chat"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.113Z",
+      "level": "INFO",
+      "message": "   - #growing-discussion → should map to growing-tips"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.113Z",
+      "level": "INFO",
+      "message": "   - #nj-dispensaries → should map to dispensary-reviews"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.113Z",
+      "level": "INFO",
+      "message": "   - #strain-reviews → should map to strain-discussions"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.113Z",
+      "level": "INFO",
+      "message": "   - #resources → should map to education-and-resources"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.113Z",
+      "level": "INFO",
+      "message": "   - #welcome → should map to welcome"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.113Z",
+      "level": "INFO",
+      "message": "   - #age-verification → should map to age-verification"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.113Z",
+      "level": "INFO",
+      "message": "   - #rules → should map to rules-and-compliance"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.114Z",
+      "level": "INFO",
+      "message": "   - #general-chat → should map to general-chat"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.114Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #general"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.330Z",
+      "level": "INFO",
+      "message": "📨 Channel #general: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.330Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:02.660Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #general"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:04.675Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #growing-discussion"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:04.856Z",
+      "level": "INFO",
+      "message": "📨 Channel #growing-discussion: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:04.856Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:05.102Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #growing-discussion"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:07.114Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #nj-dispensaries"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:07.256Z",
+      "level": "INFO",
+      "message": "📨 Channel #nj-dispensaries: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:07.256Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:07.596Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #nj-dispensaries"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:09.599Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #strain-reviews"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:09.795Z",
+      "level": "INFO",
+      "message": "📨 Channel #strain-reviews: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:09.795Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:09.982Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #strain-reviews"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:11.988Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #resources"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:12.128Z",
+      "level": "INFO",
+      "message": "📨 Channel #resources: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:12.128Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:12.297Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #resources"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:14.303Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #welcome"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:14.544Z",
+      "level": "INFO",
+      "message": "📨 Channel #welcome: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:14.544Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:14.781Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #welcome"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:16.791Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #age-verification"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:17.017Z",
+      "level": "INFO",
+      "message": "📨 Channel #age-verification: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:17.017Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:17.192Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #age-verification"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:19.202Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #rules"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:19.351Z",
+      "level": "INFO",
+      "message": "📨 Channel #rules: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:19.351Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:19.486Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #rules"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:21.489Z",
+      "level": "INFO",
+      "message": "\n🔧 Processing duplicate channel: #general-chat"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:21.652Z",
+      "level": "INFO",
+      "message": "📨 Channel #general-chat: Found 0 user messages"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:21.653Z",
+      "level": "INFO",
+      "message": "🗑️ Deleting duplicate channel (empty, has equivalent in proper categories)"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:21.814Z",
+      "level": "SUCCESS",
+      "message": "🗑️ Deleted duplicate channel #general-chat"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.826Z",
+      "level": "INFO",
+      "message": "🔍 Verifying final server structure..."
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.826Z",
+      "level": "INFO",
+      "message": "🔍 Analyzing current Discord server structure..."
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.827Z",
+      "level": "INFO",
+      "message": "📊 Analysis complete:"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.827Z",
+      "level": "INFO",
+      "message": "   Categories: 9"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.827Z",
+      "level": "INFO",
+      "message": "   Text Channels: 15"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.827Z",
+      "level": "INFO",
+      "message": "   Voice Channels: 4"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.827Z",
+      "level": "INFO",
+      "message": "   Intended Categories Found: 4/4"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.827Z",
+      "level": "INFO",
+      "message": "   Duplicate Channels: 0"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.827Z",
+      "level": "INFO",
+      "message": "   Issues Found: 1"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.828Z",
+      "level": "SUCCESS",
+      "message": "✅ Final structure verification PASSED!"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.828Z",
+      "level": "SUCCESS",
+      "message": "✅ All 4/4 intended categories present"
+    },
+    {
+      "timestamp": "2025-07-26T03:36:23.828Z",
+      "level": "SUCCESS",
+      "message": "✅ No duplicate channels outside categories"
+    }
+  ]
+}

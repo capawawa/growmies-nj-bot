@@ -1,0 +1,242 @@
+{
+  "timestamp": "2025-07-26T13:47:33.272Z",
+  "botStatus": {
+    "botTag": "GrowmiesSprout 🌱#0151",
+    "botId": "1391996103628558369",
+    "guildName": "Growmies NJ",
+    "guildId": "1390722668025872504",
+    "memberCount": 7,
+    "channelCount": 24,
+    "roleCount": 18,
+    "botPermissions": [
+      "CreateInstantInvite",
+      "Administrator",
+      "ManageChannels",
+      "AddReactions",
+      "ViewAuditLog",
+      "Stream",
+      "ViewChannel",
+      "SendMessages",
+      "EmbedLinks",
+      "AttachFiles",
+      "ReadMessageHistory",
+      "MentionEveryone",
+      "UseExternalEmojis",
+      "Connect",
+      "Speak",
+      "MoveMembers",
+      "UseVAD",
+      "ChangeNickname",
+      "ManageRoles",
+      "ManageWebhooks",
+      "UseApplicationCommands",
+      "RequestToSpeak",
+      "CreatePublicThreads",
+      "CreatePrivateThreads",
+      "UseExternalStickers",
+      "SendMessagesInThreads",
+      "UseEmbeddedActivities",
+      "UseSoundboard",
+      "CreateGuildExpressions",
+      "CreateEvents",
+      "UseExternalSounds",
+      "SendVoiceMessages",
+      "SendPolls",
+      "UseExternalApps"
+    ],
+    "isOnline": true,
+    "uptime": 3
+  },
+  "commandTests": {
+    "ping": {
+      "status": "registered",
+      "description": "Basic connectivity test",
+      "commandId": "1398493636374695978",
+      "responseTime": 370,
+      "timestamp": "2025-07-26T13:47:34.080Z"
+    },
+    "server": {
+      "status": "registered",
+      "description": "Server information display",
+      "commandId": "1398493636374695979",
+      "responseTime": 385,
+      "timestamp": "2025-07-26T13:47:35.609Z"
+    },
+    "8ball": {
+      "status": "registered",
+      "description": "Magic 8-ball responses",
+      "commandId": "1398493635628105862",
+      "responseTime": 241,
+      "timestamp": "2025-07-26T13:47:36.962Z"
+    },
+    "celebrate": {
+      "status": "registered",
+      "description": "Celebration messages",
+      "commandId": "1398493635628105863",
+      "responseTime": 253,
+      "timestamp": "2025-07-26T13:47:38.356Z"
+    },
+    "coinflip": {
+      "status": "registered",
+      "description": "Random coin flip",
+      "commandId": "1398493635628105864",
+      "responseTime": 332,
+      "timestamp": "2025-07-26T13:47:39.805Z"
+    },
+    "compliment": {
+      "status": "registered",
+      "description": "User compliments",
+      "commandId": "1398493635628105865",
+      "responseTime": 323,
+      "timestamp": "2025-07-26T13:47:41.302Z"
+    },
+    "dice": {
+      "status": "registered",
+      "description": "Dice rolling",
+      "commandId": "1398493635628105867",
+      "responseTime": 265,
+      "timestamp": "2025-07-26T13:47:42.673Z"
+    },
+    "suggest": {
+      "status": "registered",
+      "description": "Suggestion system",
+      "commandId": "1398493635875705023",
+      "responseTime": 387,
+      "timestamp": "2025-07-26T13:47:44.223Z"
+    },
+    "vote": {
+      "status": "registered",
+      "description": "Voting functionality",
+      "commandId": "1398493635875705024",
+      "responseTime": 357,
+      "timestamp": "2025-07-26T13:47:45.720Z"
+    },
+    "would-you-rather": {
+      "status": "registered",
+      "description": "Would you rather game",
+      "commandId": "1398493635875705025",
+      "responseTime": 270,
+      "timestamp": "2025-07-26T13:47:47.171Z"
+    },
+    "quiz": {
+      "status": "registered",
+      "description": "Cannabis knowledge quiz",
+      "commandId": "1398493635628105869",
+      "responseTime": 292,
+      "timestamp": "2025-07-26T13:47:48.726Z"
+    },
+    "strain-guess": {
+      "status": "registered",
+      "description": "Strain guessing game",
+      "commandId": "1398493635628105870",
+      "responseTime": 394,
+      "timestamp": "2025-07-26T13:47:50.266Z"
+    },
+    "strain-info": {
+      "status": "registered",
+      "description": "Strain information lookup",
+      "commandId": "1398493635875705022",
+      "responseTime": 764,
+      "timestamp": "2025-07-26T13:47:52.236Z"
+    },
+    "daily-challenge": {
+      "status": "registered",
+      "description": "Daily challenge system",
+      "commandId": "1398493635628105866",
+      "responseTime": 304,
+      "timestamp": "2025-07-26T13:47:53.744Z"
+    },
+    "level": {
+      "status": "registered",
+      "description": "User level display",
+      "commandId": "1398493635875705027",
+      "responseTime": 448,
+      "timestamp": "2025-07-26T13:47:55.365Z"
+    },
+    "leaderboard": {
+      "status": "registered",
+      "description": "Guild leaderboard",
+      "commandId": "1398493635875705026",
+      "responseTime": 440,
+      "timestamp": "2025-07-26T13:47:56.956Z"
+    },
+    "verify": {
+      "status": "registered",
+      "description": "Age verification system",
+      "commandId": "1398493635628105861",
+      "responseTime": 274,
+      "timestamp": "2025-07-26T13:47:58.436Z"
+    },
+    "warn": {
+      "status": "skipped",
+      "reason": "Skipped in live environment to prevent disruption",
+      "responseTime": 0,
+      "timestamp": "2025-07-26T13:47:59.578Z"
+    },
+    "timeout": {
+      "status": "skipped",
+      "reason": "Skipped in live environment to prevent disruption",
+      "responseTime": 0,
+      "timestamp": "2025-07-26T13:47:59.579Z"
+    },
+    "kick": {
+      "status": "skipped",
+      "reason": "Skipped in live environment to prevent disruption",
+      "responseTime": 0,
+      "timestamp": "2025-07-26T13:47:59.579Z"
+    },
+    "ban": {
+      "status": "skipped",
+      "reason": "Skipped in live environment to prevent disruption",
+      "responseTime": 0,
+      "timestamp": "2025-07-26T13:47:59.579Z"
+    },
+    "unban": {
+      "status": "skipped",
+      "reason": "Skipped in live environment to prevent disruption",
+      "responseTime": 0,
+      "timestamp": "2025-07-26T13:47:59.579Z"
+    },
+    "purge": {
+      "status": "skipped",
+      "reason": "Skipped in live environment to prevent disruption",
+      "responseTime": 0,
+      "timestamp": "2025-07-26T13:47:59.579Z"
+    }
+  },
+  "integrationTests": {
+    "welcomeSystem": {
+      "status": "not_configured",
+      "error": "Welcome channel not found"
+    },
+    "database": {
+      "status": "operational",
+      "note": "Bot can send messages, implying database connectivity"
+    },
+    "healthMonitoring": {
+      "status": "operational",
+      "websocketLatency": 30,
+      "uptime": 26190
+    }
+  },
+  "performanceMetrics": {
+    "totalTestDuration": 26621,
+    "averageCommandResponseTime": 359,
+    "websocketLatency": 30,
+    "memoryUsage": {
+      "rss": 59346944,
+      "heapTotal": 18628608,
+      "heapUsed": 16205488,
+      "external": 3535321,
+      "arrayBuffers": 130814
+    },
+    "uptime": 26191
+  },
+  "summary": {
+    "total": 23,
+    "passed": 17,
+    "failed": 0,
+    "errors": [],
+    "successRate": 74
+  }
+}

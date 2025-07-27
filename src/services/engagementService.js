@@ -14,6 +14,9 @@ const roleManagementService = require('./roleManagement');
 const ageVerificationService = require('./ageVerification');
 const { WelcomeEmbeds } = require('../utils/embeds');
 
+// Import economy service for currency rewards
+const economyService = require('./economyService');
+
 /**
  * Engagement tracking and XP integration service
  * Manages all user engagement activities with cannabis compliance
@@ -395,6 +398,28 @@ class EngagementService {
       // Check for level progression
       const levelResult = await roleManagementService.checkLevelProgression(user, guildId);
 
+      // Award economy rewards for engagement activities
+      let economyRewards = { growCoins: 0, premiumSeeds: 0 };
+      try {
+        const economyResult = await economyService.awardEngagementRewards(
+          userId,
+          guildId,
+          activityType,
+          {
+            ...metadata,
+            xp_awarded: xpAwarded,
+            level: user.current_level,
+            tier: user.level_tier
+          }
+        );
+        
+        if (economyResult.success) {
+          economyRewards = economyResult.rewards;
+        }
+      } catch (economyError) {
+        console.warn(`Failed to award economy rewards for ${activityType}:`, economyError);
+      }
+
       return {
         success: true,
         activityType,
@@ -402,7 +427,8 @@ class EngagementService {
         levelUp: levelResult.leveledUp,
         newLevel: levelResult.newLevel,
         newTier: levelResult.newTier,
-        totalXP: user.total_xp + xpAwarded
+        totalXP: user.total_xp + xpAwarded,
+        economyRewards
       };
 
     } catch (error) {

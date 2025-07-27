@@ -28,7 +28,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Import existing services for integration
-const { createAuditLog } = require('../src/services/moderationService');
+const { AuditLog } = require('../src/database/models/AuditLog');
 
 /**
  * Cannabis Compliance Role Permission Validator
@@ -696,11 +696,17 @@ class DiscordRoleHierarchyManager {
 
         // Create audit log entry
         if (!this.dryRun) {
-            await createAuditLog({
-                action: 'role_hierarchy_configured',
-                moderator: this.client.user.id,
-                reason: 'Automated role hierarchy setup with cannabis compliance validation',
-                details: validation
+            await AuditLog.create({
+                action_type: 'admin_action',
+                actor_user_id: this.client.user.id,
+                guild_id: this.guild.id,
+                details: {
+                    admin_action: 'role_hierarchy_configured',
+                    reason: 'Automated role hierarchy setup with cannabis compliance validation',
+                    validation: validation
+                },
+                severity: 'medium',
+                compliance_flag: true
             });
         }
 

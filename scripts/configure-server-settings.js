@@ -28,7 +28,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Import existing services for integration
-const { createAuditLog } = require('../src/services/moderationService');
+const { AuditLog } = require('../src/database/models/AuditLog');
 
 /**
  * Cannabis Compliance Server Configuration Validator
@@ -64,7 +64,7 @@ class CannabisComplianceServerValidator {
 
         // Verification level validation
         if (setting === 'verification_level') {
-            if (config.level !== VerificationLevel.High && config.level !== VerificationLevel.VeryHigh) {
+            if (config.level !== 3 && config.level !== 4) { // 3 = High, 4 = VeryHigh
                 compliance.complianceChecks.push({
                     check: 'verification_level_requirement',
                     status: 'FAILED',
@@ -76,7 +76,7 @@ class CannabisComplianceServerValidator {
 
         // Content filter validation
         if (setting === 'explicit_content_filter') {
-            if (config.level !== ExplicitContentFilterLevel.AllMembers) {
+            if (config.level !== 2) { // 2 = AllMembers
                 compliance.complianceChecks.push({
                     check: 'content_filter_requirement',
                     status: 'FAILED',
@@ -218,9 +218,9 @@ class DiscordServerConfiguration {
         this.log('🔒 Configuring server security settings...', 'INFO');
 
         const securityConfig = {
-            verificationLevel: VerificationLevel.High,
-            explicitContentFilter: ExplicitContentFilterLevel.AllMembers,
-            defaultMessageNotifications: DefaultMessageNotificationLevel.OnlyMentions,
+            verificationLevel: 3, // High
+            explicitContentFilter: 2, // AllMembers
+            defaultMessageNotifications: 1, // OnlyMentions
             systemChannelFlags: ['SuppressJoinNotifications', 'SuppressPremiumSubscriptions']
         };
 
@@ -285,28 +285,7 @@ class DiscordServerConfiguration {
         const brandingConfig = {
             description: `🌿 GrowmiesNJ - New Jersey Cannabis Community 🌿
 
-Join our legal, educational cannabis community for adults in New Jersey! 
-
-🔞 AGE REQUIREMENTS:
-• 18+ for general community access
-• 21+ for cannabis discussions and content
-
-📚 EDUCATIONAL PURPOSE:
-This server provides educational information about cannabis cultivation, consumption, and New Jersey cannabis laws. All content is for educational purposes only.
-
-⚖️ LEGAL COMPLIANCE:
-• New Jersey recreational/medical cannabis laws only
-• No illegal activity discussion
-• Licensed dispensary information only
-• Home cultivation educational content (where legal)
-
-🛡️ COMMUNITY STANDARDS:
-• Respectful, adult conversations
-• Evidence-based information sharing
-• Harm reduction focused
-• Medical advice disclaimer: Consult healthcare providers
-
-Welcome to a responsible cannabis community! 🌱`,
+Educational cannabis community for adults in New Jersey. 18+ required, 21+ for cannabis content. legal compliance focus. Educational purpose only. Welcome! 🌱`,
             
             reason: 'GrowmiesNJ cannabis community branding with compliance messaging'
         };
@@ -605,7 +584,7 @@ Welcome to a responsible cannabis community! 🌱`,
 
         // Create audit log entry
         if (!this.dryRun) {
-            await createAuditLog({
+            await AuditLog.create({
                 action: 'server_configuration_completed',
                 moderator: this.client.user.id,
                 reason: 'Automated server configuration with cannabis compliance validation',

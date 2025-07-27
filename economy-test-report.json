@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-07-26T13:23:48.218Z",
+  "summary": {
+    "total": 17,
+    "passed": 11,
+    "failed": 6,
+    "warnings": 0,
+    "successRate": "64.7"
+  },
+  "details": [
+    {
+      "test": "Environment initialization",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.173Z"
+    },
+    {
+      "test": "Economy helpers structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.193Z"
+    },
+    {
+      "test": "balance command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.196Z"
+    },
+    {
+      "test": "daily command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.197Z"
+    },
+    {
+      "test": "shop command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.198Z"
+    },
+    {
+      "test": "inventory command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.200Z"
+    },
+    {
+      "test": "gift command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.202Z"
+    },
+    {
+      "test": "work command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.205Z"
+    },
+    {
+      "test": "leaderboard command structure",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.208Z"
+    },
+    {
+      "test": "Cannabis compliance validation",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.212Z"
+    },
+    {
+      "test": "System integrations validation",
+      "status": "PASS",
+      "timestamp": "2025-07-26T13:23:48.214Z"
+    }
+  ],
+  "errors": [
+    {
+      "test": "Economy model loading",
+      "error": "Economy missing required element: sequelize.define",
+      "timestamp": "2025-07-26T13:23:48.179Z"
+    },
+    {
+      "test": "EconomyItem model loading",
+      "error": "EconomyItem missing required element: sequelize.define",
+      "timestamp": "2025-07-26T13:23:48.181Z"
+    },
+    {
+      "test": "EconomyTransaction model loading",
+      "error": "EconomyTransaction missing required element: sequelize.define",
+      "timestamp": "2025-07-26T13:23:48.183Z"
+    },
+    {
+      "test": "UserInventory model loading",
+      "error": "UserInventory missing required element: sequelize.define",
+      "timestamp": "2025-07-26T13:23:48.185Z"
+    },
+    {
+      "test": "EconomyShop model loading",
+      "error": "EconomyShop missing required element: sequelize.define",
+      "timestamp": "2025-07-26T13:23:48.187Z"
+    },
+    {
+      "test": "Economy service",
+      "error": "Missing import: EngagementService",
+      "timestamp": "2025-07-26T13:23:48.191Z"
+    }
+  ],
+  "warnings": [],
+  "configuration": {
+    "verbose": true,
+    "stopOnFirstError": false,
+    "generateReport": true,
+    "testDatabaseModels": true,
+    "testServiceLayer": true,
+    "testCommandIntegration": true,
+    "testCompliance": true,
+    "testIntegrations": true
+  }
+}

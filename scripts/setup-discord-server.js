@@ -28,7 +28,7 @@ dotenv.config();
 
 // Import existing services for integration
 const ageVerification = require('../src/services/ageVerification');
-const { createAuditLog } = require('../src/services/moderationService');
+const { AuditLog } = require('../src/database/models/AuditLog');
 
 /**
  * Cannabis Compliance Validation System
@@ -69,8 +69,8 @@ class CannabisComplianceValidator {
             return false;
         }
 
-        // Disclaimer requirement validation
-        if (channelConfig.cannabisContent && !channelConfig.topic.includes('18+ only') && !channelConfig.topic.includes('21+ only')) {
+        // Disclaimer requirement validation (skip for voice channels without topics)
+        if (channelConfig.cannabisContent && channelConfig.topic && !channelConfig.topic.includes('18+ only') && !channelConfig.topic.includes('21+ only')) {
             compliance.complianceChecks.push({
                 check: 'disclaimer_required',
                 status: 'FAILED',
@@ -79,8 +79,8 @@ class CannabisComplianceValidator {
             return false;
         }
 
-        // Educational content validation
-        if (channelConfig.cannabisContent && !channelConfig.topic.includes('educational') && !channelConfig.topic.includes('responsible use')) {
+        // Educational content validation (skip for voice channels without topics)
+        if (channelConfig.cannabisContent && channelConfig.topic && !channelConfig.topic.includes('educational') && !channelConfig.topic.includes('responsible use')) {
             compliance.complianceChecks.push({
                 check: 'educational_content',
                 status: 'WARNING',
@@ -161,13 +161,35 @@ class DiscordServerSetup {
             await this.client.login(process.env.DISCORD_TOKEN);
             this.log('✅ Discord client logged in successfully', 'SUCCESS');
 
-            // Get guild
-            this.guild = await this.client.guilds.fetch(process.env.GUILD_ID);
-            if (!this.guild) {
-                throw new Error(`Guild with ID ${process.env.GUILD_ID} not found`);
+            // Get guild and ensure roles are fetched
+            try {
+                this.guild = await this.client.guilds.fetch(process.env.GUILD_ID);
+                if (!this.guild) {
+                    throw new Error(`Guild with ID ${process.env.GUILD_ID} not found`);
+                }
+                
+                // Ensure roles are fetched
+                if (!this.guild.roles.cache.size) {
+                    await this.guild.roles.fetch();
+                }
+                
+                this.log(`✅ Connected to guild: ${this.guild.name} (ID: ${this.guild.id})`, 'SUCCESS');
+                this.log(`✅ Guild roles loaded: ${this.guild.roles.cache.size} roles`, 'SUCCESS');
+            } catch (error) {
+                this.log(`❌ Failed to fetch guild ${process.env.GUILD_ID}: ${error.message}`, 'ERROR');
+                // Try to get from cache instead
+                this.guild = this.client.guilds.cache.get(process.env.GUILD_ID);
+                if (!this.guild) {
+                    throw new Error(`Guild with ID ${process.env.GUILD_ID} not found in cache either`);
+                }
+                
+                // Ensure roles are fetched for cached guild too
+                if (!this.guild.roles.cache.size) {
+                    await this.guild.roles.fetch();
+                }
+                
+                this.log(`✅ Found guild in cache: ${this.guild.name} (ID: ${this.guild.id})`, 'SUCCESS');
             }
-
-            this.log(`✅ Connected to guild: ${this.guild.name}`, 'SUCCESS');
 
         } catch (error) {
             this.log(`❌ Initialization failed: ${error.message}`, 'ERROR');
@@ -506,11 +528,17 @@ class DiscordServerSetup {
 
         // Create audit log entry
         if (!this.dryRun) {
-            await createAuditLog({
-                action: 'server_setup_completed',
-                moderator: this.client.user.id,
-                reason: 'Automated server structure setup with cannabis compliance',
-                details: validation
+            await AuditLog.create({
+                action_type: 'admin_action',
+                actor_user_id: this.client.user.id,
+                guild_id: this.guild.id,
+                details: {
+                    admin_action: 'server_setup_completed',
+                    reason: 'Automated server structure setup with cannabis compliance',
+                    validation: validation
+                },
+                severity: 'medium',
+                compliance_flag: true
             });
         }
 
@@ -602,7 +630,7 @@ class DiscordServerSetup {
 
             await this.createServerCategories();
             await this.createChannels();
-            validation = await validateSetup();
+            validation = await this.validateSetup();
             
             const report = await this.generateReport();
             

@@ -1,182 +1,98 @@
-const { SlashCommandBuilder, InteractionContextType, MessageFlags } = require('discord.js');
-const { User } = require('../../database/models/User');
-const { AuditLog } = require('../../database/models/AuditLog');
-const { WelcomeEmbeds } = require('../../utils/embeds');
-const { RoleManagementService } = require('../../services/roleManagement');
+const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('verify')
-        .setDescription('Verify that you are 21+ years old to access cannabis community content')
-        .setContexts(InteractionContextType.Guild)
-        .setDefaultMemberPermissions(null), // Available to all members
+        .setDescription('Verify that you are 21+ years old to access cannabis community content'),
     
     async execute(interaction) {
         try {
-            // Always respond privately for age verification
-            await interaction.deferReply({ ephemeral: true });
-            
-            const member = interaction.member;
-            const guild = interaction.guild;
-            
-            // Check if user is already verified
+            // Check if user already has the verified role
             const verifiedRoleId = process.env.AGE_VERIFICATION_ROLE_ID;
             if (!verifiedRoleId) {
-                await interaction.editReply({
-                    content: '⚠️ Age verification system is not properly configured. Please contact an administrator.',
-                    flags: MessageFlags.Ephemeral
+                return await interaction.reply({
+                    content: '⚠️ Age verification system is not configured. Please contact an administrator.',
+                    ephemeral: true
                 });
-                return;
             }
-            
-            const verifiedRole = guild.roles.cache.get(verifiedRoleId);
+
+            const verifiedRole = interaction.guild.roles.cache.get(verifiedRoleId);
             if (!verifiedRole) {
-                await interaction.editReply({
+                return await interaction.reply({
                     content: '⚠️ Verification role not found. Please contact an administrator.',
-                    flags: MessageFlags.Ephemeral
+                    ephemeral: true
                 });
-                return;
             }
-            
-            // Check database verification status first
-            let userRecord = null;
-            try {
-                userRecord = await User.findOne({
-                    where: {
-                        discord_id: interaction.user.id,
-                        guild_id: guild.id,
-                        is_active: true
-                    }
+
+            // Check if user already has the role
+            if (interaction.member.roles.cache.has(verifiedRoleId)) {
+                return await interaction.reply({
+                    content: '✅ **Already Verified**\n\nYou are already verified as 21+ years old and have access to cannabis community content.',
+                    ephemeral: true
                 });
-            } catch (dbError) {
-                console.error('❌ Database error checking user verification:', dbError);
-                // Continue with role-only check as fallback
             }
 
-            // Check if user is verified in database OR has the Discord role
-            const isVerifiedInDb = userRecord && userRecord.verification_status === 'verified';
-            const hasDiscordRole = member.roles.cache.has(verifiedRoleId);
-
-            if (isVerifiedInDb || hasDiscordRole) {
-                // If verified in database but missing Discord role, try to assign it
-                if (isVerifiedInDb && !hasDiscordRole) {
-                    try {
-                        await member.roles.add(verifiedRole, 'Database verification - role sync');
-                        console.log(`🔄 Role synced for verified user ${interaction.user.tag}`);
-                        
-                        // Log role sync
-                        await AuditLog.logRoleAssignment(
-                            interaction.user.id,
-                            guild.id,
-                            'system',
-                            [verifiedRoleId],
-                            { reason: 'Database verification - role synchronization' }
-                        );
-                    } catch (roleError) {
-                        console.error('❌ Failed to sync role for verified user:', roleError);
-                    }
-                }
-
-                // If has role but not verified in database, create database record
-                if (hasDiscordRole && !isVerifiedInDb) {
-                    try {
-                        await User.upsert({
-                            discord_id: interaction.user.id,
-                            guild_id: guild.id,
-                            username: interaction.user.username,
-                            display_name: interaction.user.displayName || interaction.user.globalName,
-                            verification_status: 'verified',
-                            verified_at: new Date(),
-                            is_21_plus: true,
-                            verification_method: 'role_sync',
-                            birth_year: new Date().getFullYear() - 21, // Minimum birth year for 21+
-                            verification_metadata: {
-                                discord_tag: interaction.user.tag,
-                                sync_timestamp: new Date().toISOString(),
-                                source: 'existing_role'
-                            }
-                        });
-                        console.log(`🔄 Database record created for existing verified user ${interaction.user.tag}`);
-                    } catch (syncError) {
-                        console.error('❌ Failed to sync database for verified user:', syncError);
-                    }
-                }
-
-                await interaction.editReply({
-                    content: '✅ **Already Verified**\n\nYou are already verified as 21+ years old and have access to cannabis community content.\n\n*Your verification status is synchronized across our systems.*',
-                    flags: MessageFlags.Ephemeral
-                });
-                return;
-            }
-
-            // Check if user was rejected or has too many attempts
-            if (userRecord) {
-                if (userRecord.verification_status === 'rejected') {
-                    await interaction.editReply({
-                        content: '🚫 **Verification Previously Denied**\n\nYou previously indicated you are under 21 years old. You must be 21+ to access cannabis content.\n\nIf this was an error, please contact an administrator.',
-                        flags: MessageFlags.Ephemeral
-                    });
-                    return;
-                }
-
-                if (!userRecord.canAttemptVerification()) {
-                    const hoursRemaining = Math.ceil((24 - ((new Date() - userRecord.last_attempt_at) / (1000 * 60 * 60))));
-                    await interaction.editReply({
-                        content: `⏱️ **Rate Limit Exceeded**\n\nYou have attempted verification too many times. Please wait ${hoursRemaining} hours before trying again.\n\nIf you need assistance, please contact an administrator.`,
-                        flags: MessageFlags.Ephemeral
-                    });
-                    return;
-                }
-            }
-            
-            // Enhanced age verification confirmation using our embed templates
-            const verificationEmbed = WelcomeEmbeds.createEnhancedVerificationEmbed();
-            
-            const verificationButtons = {
-                type: 1, // Action Row
-                components: [
+            // Create verification embed
+            const embed = new EmbedBuilder()
+                .setTitle('🔞 Age Verification Required')
+                .setDescription('**Cannabis content requires age verification (21+)**\n\nTo access cannabis-related content in this community, you must confirm that you are 21 years or older.\n\n**Legal Notice:**\n• Cannabis is legal in New Jersey for adults 21+\n• This verification ensures legal compliance\n• Your response is private and secure')
+                .setColor('#FFA500')
+                .addFields(
                     {
-                        type: 2, // Button
-                        style: 3, // Success (Green)
-                        label: '✅ I Verify - I am 21+',
-                        custom_id: 'age_verify_confirm',
-                        emoji: '🌿'
+                        name: '📋 What happens after verification?',
+                        value: '• Access to cannabis discussion channels\n• Participation in strain-related activities\n• Educational content and resources\n• Community engagement features',
+                        inline: false
                     },
                     {
-                        type: 2, // Button
-                        style: 4, // Danger (Red)
-                        label: '❌ Under 21',
-                        custom_id: 'age_verify_deny',
-                        emoji: '🚫'
+                        name: '🔒 Privacy & Security',
+                        value: 'Your verification status is stored securely and never shared. This process complies with Discord Terms of Service and applicable laws.',
+                        inline: false
                     }
-                ]
-            };
-            
-            await interaction.editReply({
-                embeds: [verificationEmbed],
-                components: [verificationButtons],
-                flags: MessageFlags.Ephemeral
+                )
+                .setFooter({ text: 'Click a button below to proceed' })
+                .setTimestamp();
+
+            // Create buttons
+            const row = new ActionRowBuilder()
+                .addComponents(
+                    new ButtonBuilder()
+                        .setCustomId('verify_confirm')
+                        .setLabel('✅ I am 21+ years old')
+                        .setStyle(ButtonStyle.Success)
+                        .setEmoji('🌿'),
+                    new ButtonBuilder()
+                        .setCustomId('verify_deny')
+                        .setLabel('❌ I am under 21')
+                        .setStyle(ButtonStyle.Danger)
+                        .setEmoji('🚫')
+                );
+
+            // Send verification message
+            await interaction.reply({
+                embeds: [embed],
+                components: [row],
+                ephemeral: true
             });
-            
-            // Log verification attempt (without personal info)
-            console.log(`🔒 Age verification initiated by user ${interaction.user.tag} (${interaction.user.id}) in guild ${guild.name}`);
-            
+
+            console.log(`🔒 Age verification initiated by ${interaction.user.tag} (${interaction.user.id})`);
+
         } catch (error) {
             console.error('❌ Error in verify command:', error);
             
-            const errorResponse = {
+            // Fallback error response
+            const errorMessage = {
                 content: '⚠️ An error occurred during verification. Please try again or contact an administrator.',
-                flags: MessageFlags.Ephemeral
+                ephemeral: true
             };
-            
+
             try {
-                if (interaction.deferred) {
-                    await interaction.editReply(errorResponse);
+                if (interaction.replied || interaction.deferred) {
+                    await interaction.editReply(errorMessage);
                 } else {
-                    await interaction.reply(errorResponse);
+                    await interaction.reply(errorMessage);
                 }
-            } catch (followUpError) {
-                console.error('❌ Failed to send error response:', followUpError);
+            } catch (replyError) {
+                console.error('❌ Failed to send error response:', replyError);
             }
         }
     },
